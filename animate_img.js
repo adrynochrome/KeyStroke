@@ -1,7 +1,7 @@
 
-$("#col1").load(function(){
-   $("#kitty").show("slide", {
-      direction: "up"
-   }, 2000);
+$( document ).ready(function() {
+$("#col1").click(function(){
+    $("#kitty").show();
+	$("#kitty").slideUp('slow');
 });
-
+});
