@@ -3,8 +3,20 @@
 
 body{
 	margin: 3px;
+	font-family: "Convergence";
 }
 
+#banner{
+	text-align: center;
+	font-weight: 600;
+	font-size: large;
+	background-color: #449EFB;
+}
+
+#banner a:link a:visited a:hover{
+	color: 000;
+	text-decoration:none;
+}
 li{
 	display: inline;	
 }
@@ -15,16 +27,12 @@ li{
 }
 
 #col1{
-	background-color:#C00;
 	width: 50px;
 	height: 50px;	
 }
 #col1 img{
 	width: 32.5%;
 	height: 32.5%;	
-}
-#kitty{
-	display: none;
 }
 
 #col2 img{
