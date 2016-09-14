@@ -3,7 +3,7 @@
 
 body{
 	margin: 3px;
-	font-family: "Convergence";
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 #banner{
@@ -14,8 +14,8 @@ body{
 }
 
 #banner a:link a:visited a:hover{
-	color: 000;
-	text-decoration:none;
+	color: 000 !important;
+	text-decoration: none !important;
 }
 li{
 	display: inline;	
