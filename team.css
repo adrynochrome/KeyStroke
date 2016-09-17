@@ -2,7 +2,7 @@
 /* CSS Document */
 
 #elise{
-	width: calc(33.33% - 3px);
+	width: calc(100% / 3 - 3px);
 	height: 33.33%;
 	float: left;	
 		
@@ -13,8 +13,8 @@
 		
 }
 #charlie{
-	width: calc(33.33% - 3px);
-	height: 33.33%;
+	width: calc(100% / 3 - 3px);
+	height: 35%;
 	float: right;	
 		
 }
@@ -24,3 +24,7 @@
 		
 }
 
+#words{
+	text-indent: 25px;
+	clear: both;
+}
