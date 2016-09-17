@@ -2,21 +2,29 @@
 /* CSS Document */
 
 body{
-	margin: 3px;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
-#banner{
-	text-align: center;
-	font-weight: 600;
-	font-size: large;
-	background-color: #449EFB;
+#content {
+  background: #34B6DA; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, #fff , #34B6DA); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #fff, #34B6DA); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #fff, #34B6DA); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #fff , #34B6DA); /* Standard syntax */
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  min-height: 800px;
 }
 
-#banner a:link a:visited a:hover{
-	color: 000 !important;
-	text-decoration: none !important;
+
+
+#banner img{
+	text-align: center;
+	width: 100%;
+	height: auto;
 }
+
 li{
 	display: inline;	
 }
@@ -26,24 +34,24 @@ li{
 	text-align: center;	
 }
 
-#col1{
-	width: 50px;
-	height: 50px;	
-}
+
 #col1 img{
-	width: 32.5%;
-	height: 32.5%;	
+	width: 32%;
+	height: 33.2%;	
 }
 
 #col2 img{
-	width: 32.5%;
-	height: 32.5%;
+	width: calc(33.33% - 3px);
+	height: 33.33%;	
 }
 #col3 img{
-	width: 32.5%;
-	height: 32.5%;
+	width: calc(33.33% - 3px);
+	height: 33.33%;	
 }
 
 .pix{
 	display: inline;
+}
+.overlay{
+	display:none;
 }
