@@ -34,24 +34,50 @@ li{
 	text-align: center;	
 }
 
-
-#col1 img{
-	width: calc(33.33% - 3px);
-	height: 33.33%;	
-}
-
-#col2 img{
-	width: calc(33.33% - 3px);
-	height: 33.33%;	
-}
-#col3 img{
-	width: calc(33.33% - 3px);
-	height: 33.33%;	
+#img-row{
+	display: table-row;
+	width: 100%;
+	height: calc(100% / 3);
+	position: relative;
 }
 
 .pix{
-	display: inline;
+	width: calc(100% / 3); 
+	height: calc(100% / 3);
+	float: left;
+	position: absolute;
+	overflow: hidden;
 }
+
+#col1{
+	height: calc(100% / 3);
+}
+
+#col1 img{
+	width: calc(100% - 3px);
+}
+
+#col2 {
+	left: calc(100% / 3);
+}
+
+#col2 img{
+	left: calc(100% - 3px);
+}
+
+#col3{
+	left: 66.666666%
+}
+
+#col3 img{
+	width: calc(100% - 3px);
+}
+
 .overlay{
-	display:none;
+	position: absolute;
+	top: 100%;
+	width: calc(100% - 3px);
+	height: 100%;
+	background-color: white;
+	opacity: 0;
 }
