@@ -1,7 +1,3 @@
-
-$( document ).ready(function() {
-$("#col1").click(function(){
-    $("#kitty").show();
-	$("#kitty").slideUp('slow');
-});
+$(document).ready(function() {
+       $('.pix').fadeIn('slow');
 });
