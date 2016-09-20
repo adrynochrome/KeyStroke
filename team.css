@@ -1,9 +1,16 @@
 @charset "UTF-8";
 /* CSS Document */
 
+p{
+	text-indent: 25px;
+}
+
+#work{
+	height: calc(35% - 3px);
+}
+
 #elise{
 	width: calc(100% / 3 - 3px);
-	height: 33.33%;
 	float: left;	
 		
 }
@@ -14,7 +21,6 @@
 }
 #charlie{
 	width: calc(100% / 3 - 3px);
-	height: 35%;
 	float: right;	
 		
 }
@@ -26,4 +32,5 @@
 
 #words{
 	clear: both;
+	padding-top: 20px;
 }

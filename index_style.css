@@ -89,7 +89,7 @@ li{
 	background-color: white;
 	opacity: 0;
 	border-radius: 15px 50px 30px;
-	padding: 3px; //text was outside of overlay kind of
+	text-align: center;
 }
 
 .overlayz{ //added margin to center column, broke the jquery
