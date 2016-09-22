@@ -1,93 +1,101 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body{
-	font-family:Arial, Helvetica, sans-serif;
+body {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
 	color: #0C1989 !important;
 }
 
 #content {
-  background: #34B6DA; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #fff , #34B6DA); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #fff, #34B6DA); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #fff, #34B6DA); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #fff , #34B6DA); /* Standard syntax */
-  height: 100%;
-  width: 100%;
-  padding: 3px;
-  min-height: 800px;
+	background: #34B6DA;
+	/* For browsers that do not support gradients */
+	
+	background: -webkit-linear-gradient(bottom, #fff, #34B6DA);
+	/* For Safari 5.1 to 6.0 */
+	
+	background: -o-linear-gradient(bottom, #fff, #34B6DA);
+	/* For Opera 11.1 to 12.0 */
+	
+	background: -moz-linear-gradient(bottom, #fff, #34B6DA);
+	/* For Firefox 3.6 to 15 */
+	
+	background: linear-gradient(to bottom, #fff, #34B6DA);
+	/* Standard syntax */
+	
+	height: 100%;
+	width: 100%;
+	padding: 3px;
+	min-height: 800px;
 }
 
-
-
-#banner img{
+#banner img {
 	text-align: center;
 	width: 100%;
 	height: auto;
 }
 
-li{
-	display: inline;	
+li {
+	display: inline;
 }
 
-
-#navbar{
-	text-align: center;	
+#navbar {
+	text-align: center;
 }
 
-#img-row{
+#img-row {
 	display: table-row;
 	width: 100%;
 	height: calc(100% / 3);
 	position: relative;
 }
 
-.pix{
-	width: calc(100% / 3); 
+.pix {
+	width: calc(100% / 3);
 	height: calc(100% / 3);
 	position: absolute;
 	overflow: hidden;
 }
 
-#col1{/*adding border radius here doesnt work, only on img*/
-	
+#col1 {
+	/*adding border radius here doesnt work, only on img*/
 }
 
-#col1 img{
+#col1 img {
 	width: calc(100% - 6px);
 	height: 100%;
 	border-radius: 5px 30px 5px 30px;
 }
 
-#col2 {/*width of img is wider than div*/
+#col2 {
+	/*width of img is wider than div*/
+	
 	left: calc(100% / 3);
 	margin-right: 3px;
 	margin-left: 3px;
-	
 }
 
-#col2 img{
+#col2 img {
 	left: calc(100% - 6px);
 	height: 100%;
 	border-radius: 30px 30px 30px 30px;
 }
 
-#col3{
+#col3 {
 	left: 69%;
-	
 }
 
-#col3 img{ /*not sure why the width is messed up now*/
+#col3 img {
+	/*not sure why the width is messed up now*/
+	
 	width: calc(100% -6px);
 	height: 100%;
 	border-radius: 30px 5px 30px 5px;
-	
 }
 
-#overlay1{
+#overlay1 {
 	position: absolute;
 	top: 100%;
 	width: calc(100% - 6px);
@@ -95,22 +103,23 @@ li{
 	background-color: white;
 	opacity: 0;
 	border-radius: 5px 30px 5px 30px;
-	
 }
 
-#overlay2{ /*added margin to center column*/
+#overlay2 {
+	/*added margin to center column*/
+	
 	position: absolute;
 	top: 100%;
 	width: calc(100% - 6px);
 	height: 100%;
 	background-color: white;
 	opacity: 0;
-	border-radius: 5px 30px 5px 30px; 
+	border-radius: 5px 30px 5px 30px;
 	margin-right: 3px;
 	margin-left: 3px;
 }
 
-#overlay3{
+#overlay3 {
 	position: absolute;
 	top: 100%;
 	width: calc(100% - 6px);
@@ -118,15 +127,15 @@ li{
 	background-color: white;
 	opacity: 0;
 	border-radius: 30px 5px 30px 5px;
-	
 }
+
 .overlay p {
 	padding: 2%;
-	text-align: center;	
+	text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
-    body {
-        background-color: 000;
-    }
+	body {
+		background-color: 000;
+	}
 }
