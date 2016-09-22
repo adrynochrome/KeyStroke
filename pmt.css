@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#qr{
+	vertical-align:text-bottom;
+	float:left;
+	width: 100px;
+	height: 100px;
+}
+
+#paypal{
+	float: right;
+}
