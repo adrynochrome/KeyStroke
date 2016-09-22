@@ -61,6 +61,7 @@ li {
 
 #col1 {
 	/*adding border radius here doesnt work, only on img*/
+	border-radius: 5px 30px 5px 30px;
 }
 
 #col1 img {
@@ -75,6 +76,7 @@ li {
 	left: calc(100% / 3);
 	margin-right: 3px;
 	margin-left: 3px;
+	border-radius: 30px 30px 30px 30px;
 }
 
 #col2 img {
@@ -85,6 +87,7 @@ li {
 
 #col3 {
 	left: 69%;
+	border-radius: 30px 5px 30px 5px;
 }
 
 #col3 img {
