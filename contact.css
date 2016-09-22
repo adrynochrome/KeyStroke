@@ -1,16 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
-
-.upload{
+.upload {
 	float: left;
 	vertical-align: text-top;
 }
-.text{
+
+.text {
 	vertical-align: text-top;
 }
 
-.button{
+.button {
 	clear: both;
 }
