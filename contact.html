@@ -1,44 +1,61 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Payments</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="index_style.css" rel="stylesheet" type="text/css" />
-<link href="contact.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Contact Us</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="index_style.css" rel="stylesheet" type="text/css" />
+	<link href="contact.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<div id= "banner"><a href="index.html"><img src="imgs/banner.gif" /></a></div>
-<div id= "navbar">
-<ul><li><a href="index.html">Home</a> |</li><li> <a href="team.html">The Team</a> |</li><li><a href="contact.html"> Contact Us</a> |</li><li><a href="testimonials"> Testimonials</a> |</li> <li><a href="pmt.html">Payments</a></li></ul>
-</div>
-<div id= "content">
-<p>  We offer free quotes and we accept a non-refundable 50% down payment based off of the initial quote. The remaining amount will not be collected until the site is complete and you are satisfied. For our clients paying entirely in BTC or cash, we offer a 10% discount. If you are a<a href= "http://liberaterva.com"> Liberate RVA</a> member, you can receive an additional 10% off.</p>
-<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you</p>
-<br />
-<br />
+	<div id="banner">
+		<a href="index.html"><img src="imgs/banner.gif" /></a>
+	</div>
+	<div id="navbar">
+		<ul>
+			<li><a href="index.html">Home</a> |</li>
+			<li> <a href="team.html">The Team</a> |</li>
+			<li><a href="contact.html"> Contact Us</a> |</li>
+			<li><a href="testimonials.html"> Testimonials</a> |</li>
+			<li><a href="pmt.html">Payments</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<p> We offer free quotes and we accept a non-refundable 50% down payment based off of the initial quote. The remaining amount will not be collected until the site is complete and you are satisfied. For our clients paying entirely in BTC or cash, we offer a 10% discount. If you are a<a href="http://liberaterva.com"> Liberate RVA</a> member, you can receive an additional 10% off.</p>
+		<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you</p>
+		<br />
+		<br />
 
-<form action="mailto:keystrokecollab@gmail.com" method="post" target="_self">
-What kind of website are you interested in?
-<input name="WordPress" type="radio" value="WordPress" />Wordpress
-<input name="From Scratch" type="radio" value="From Scratch" />From Scratch
-<input name="Not Sure" type="radio" value="Not Sure" />Not Sure<br />
-<br />
-<p class= "left">Please tell us a little bit about what you have in mind for your site, let us know if this is a re-vamp or if there is a site that you would like it modeled after</p>
-<textarea name="text" required cols="40" rows="5" class="text"></textarea>
-<br />
+		<form action="submit.php" method="post" enctype="multipart/form-data" target="_self">
+			<p>Email address</p>
+			<input name="email" type="text" /><br />
+			<p>Your name</p>
+			<input name="name" type="text" /><br />
+			<p>Your phone</p>
+			<input name="phone" type="text" /><br />
+			<p>Website ame</p>
+			<input name="domain" type="text" /><br />
+			What kind of website are you interested in?<br />
+			<input name="type" type="radio" value="WordPress" />Wordpress<br />
+			<input name="type" type="radio" value="FromScratch" />From Scratch<br />
+			<input name="type" type="radio" value="Not Sure" />Not Sure<br />
+			<input name="type" type="radio" value="Other" />Other
+			<input name="other" type="text" id="other" /><br />
+			<br />
+			<p class="left">Please tell us a little bit about what you have in mind for your site, let us know if this is a re-vamp or if there is a site that you would like it modeled after</p>
+			<textarea name="description" required cols="40" rows="5" class="text"></textarea><br />
+			<p>If you have any visual representations or mock ups, feel free to upload them here:</p>
+			<input name="image1" type="file" accept="image/*" size="10mb" class="upload" /><br />
+			<input name="image2" type="file" accept="image/*" size="10mb" class="upload" /><br />
+			<input name="submit" type="submit" value="Submit" class="button" />
+		</form>
+	</div>
 
-If you have any visual representations or mock ups, feel free to upload them here:
-<input name="upload" type="file" size="10mb" class= "upload" /> <input name="upload" type="file" size="10mb" class= "upload"/>
-
-</form>
-<input name="submit" type="submit" value="Submit" class="button" />
-</div>
-
-</div>
 </body>
+
 </html>

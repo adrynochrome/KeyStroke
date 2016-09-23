@@ -1,38 +1,50 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Payments</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="index_style.css" rel="stylesheet" type="text/css" />
-<link href="pmt.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Payments</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="index_style.css" rel="stylesheet" type="text/css" />
+	<link href="pmt.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<div id= "banner"><a href="index.html"><img src="imgs/banner.gif" /></a></div>
-<div id= "navbar">
+	<div id="banner">
+		<a href="index.html"><img src="imgs/banner.gif" /></a>
+	</div>
+	<div id="navbar">
 
-<ul><li><a href="index.html">Home</a> |</li><li> <a href="team.html">The Team</a> |</li><li><a href="contact.html"> Contact Us</a> |</li><li><a href="testimonials"> Testimonials</a> |</li> <li><a href="pmt.html">Payments</a></li></ul>
-</div>
-<div id="content">
-<p>We accept payment for our custom websites in cash, money order, Bitcoin. We also accept donations via PayPal.</p>
-<img src="imgs/BTC_QR.png" id="qr"/> <br /><p>To send Bitcoin, simply scan this QR code or you can manually send your payment to 16y9wAUGkLnNwVfACfSPdDHrBWrr3XfgEF</p>
+		<ul>
+			<li><a href="index.html">Home</a> |</li>
+			<li> <a href="team.html">The Team</a> |</li>
+			<li><a href="contact.html"> Contact Us</a> |</li>
+			<li><a href="testimonials.html"> Testimonials</a> |</li>
+			<li><a href="pmt.html">Payments</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<p>We accept payment for our custom websites in cash, money order, Bitcoin. We also accept donations via PayPal.</p>
+		<img src="imgs/BTC_QR.png" id="qr" />
+		<br />
+		<p>To send Bitcoin, simply scan this QR code or you can manually send your payment to 16y9wAUGkLnNwVfACfSPdDHrBWrr3XfgEF</p>
 
-<br>
+		<br>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id = "paypal" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
 ">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
 
 
-</div>
-</div>
+	</div>
+	</div>
 </body>
+
 </html>
