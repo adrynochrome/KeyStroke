@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -35,24 +34,28 @@
 		<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you.</p>
 		<br />
 		<br />
-		
-		<form action="submit.php" method="post" enctype="multipart/form-data" target="_self">
+		<form action="submit.php" method="post" enctype="multipart/form-data" target="_self" id="contact-form">
 			<p>Email address</p>
-			<input name="email" type="text" /><br />
+			<input name="email" id="email" type="text" /><br />
 			<p>Your name</p>
-			<input name="name" type="text" /><br />
+			<input name="name" id="name" type="text" /><br />
 			<p>Your phone</p>
-			<input name="phone" type="text" /><br />
+			<input name="phone" id="phone" type="text" /><br />
 			<p>Website name</p>
+<<<<<<< HEAD
 			<input name="domain" type="text" /><br />
             <div id = "nuts">
+=======
+			<input name="domain" id="domain" type="text" /><br />
+>>>>>>> origin/Elise
 			What kind of website are you interested in?<br />
-			<input name="type" type="radio" value="WordPress" />Wordpress<br />
-			<input name="type" type="radio" value="FromScratch" />From Scratch<br />
-			<input name="type" type="radio" value="Not Sure" />Not Sure<br />
-			<input name="type" type="radio" value="Other" />Other
-			<input name="other" type="text" id="other" /><br />
+			<input name="type" id="radio1" type="radio" value="WordPress" />Wordpress<br />
+			<input name="type" id="radio2" type="radio" value="FromScratch" />From Scratch<br />
+			<input name="type" id="radio3" type="radio" value="Not Sure" />Not Sure<br />
+			<input name="type" id="radio4" type="radio" value="Other" />Other
+			<input name="other" id="other" type="text" /><br />
 			<br />
+<<<<<<< HEAD
             </div>
             
 			<p class="left">Please tell us a little bit about what you have in mind for your site, let us know if this is a revamp or if there is a site that you would like it modeled after</p>
@@ -60,6 +63,11 @@
 			<p>If you have any visual representations or mock ups,<br /> feel free to upload them here:</p>
             
             <div id = "uploads">
+=======
+			<p class="left">Please tell us a little bit about what you have in mind for your site, let us know if this is a re-vamp or if there is a site that you would like it modeled after</p>
+			<textarea name="description" id="description" cols="40" rows="5" class="text"></textarea><br />
+			<p>If you have any visual representations or mock ups, feel free to upload them here:</p>
+>>>>>>> origin/Elise
 			<input name="image1" type="file" accept="image/*" size="10mb" class="upload" /><br />
 			<input name="image2" type="file" accept="image/*" size="10mb" class="upload" /><br />
             </div><!--enduploads div---->
@@ -67,7 +75,11 @@
             
 			<p>When would you like to launch the site?</p>
 			<input name="date" type="text" id="datepicker" /><br/>
+<<<<<<< HEAD
 			<div class= "button"><input name="submit" type="submit" value="Submit"/></div>
+=======
+			<input type="button" value="Submit" class="button" onClick="processForm()" />
+>>>>>>> origin/Elise
 		</form>
 	</div>
 	
@@ -75,7 +87,64 @@
 		$( function() {
 			$( "#datepicker" ).datepicker();
 		} );
+		
+		function processForm() {
+			var cleared = true;
+			
+			if($("#email").val() === '')
+			{
+				cleared = false;
+				alert("Missing email address");
+			}
+			
+			if($("#name").val() === '')
+			{
+				cleared = false;
+				alert("Missing name");
+			}
+			
+			if($("#phone").val() === '')
+			{
+				cleared = false;
+				alert("Missing phone number");
+			}
+			
+			if($("#domain").val() === '')
+			{
+				cleared = false;
+				alert("Missing website name");
+			}
+			
+			if(!$("#radio1").prop('checked') && !$("#radio2").prop('checked') && !$("#radio3").prop('checked') && !$("#radio4").prop('checked'))
+			{
+				cleared = false;
+				console.log($("#radio1").prop('checked'));
+				alert("Missing type of site");
+			}
+			
+			if($("#radio4").prop('checked'))
+			{
+				if($("#other").val() === '')
+				{
+					cleared = false;
+					alert("Missing type of site description");
+				}
+			}
+			
+			if($("#description").val() === '')
+			{
+				cleared = false;
+				alert("Missing website description");
+			}
+			
+			if($("#datepicker").val() === '')
+			{
+				cleared = false;
+				alert("Missing launch date");
+			}
+		}
 	</script>
 
 </body>
 
+</html>
