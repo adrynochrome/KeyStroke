@@ -58,15 +58,23 @@
 	margin-top: 25px;
 	
 }
-
+#overwhelmed{
+	border-radius: 50px 50px 50px 50px;
+	padding: 10px;
+	
+}
+#overwhelmed:focus{
+	outline: none !important;
+    box-shadow: 0 0 10px #0C1989;
+}
 .feedback{
 	border-radius: 50px 50px 50px 50px;
+	padding: 10px;
 }
 
 .feedback:focus{/* done */
     outline: none !important;
-    border-color: #0C1989;
-    box-shadow: 0 0 10px #0C1989;
+	 box-shadow: 0 0 10px #0C1989;
 };
-}
+
 	
