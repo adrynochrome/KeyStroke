@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.charlie_says{
+.charlie_says {
 	postion: relative;
 }
 
-.left_quote{
+.left_quote {
 	float: left;
 	border-radius: 50px 50px 50px 50px;
 	box-shadow: 0px 0px 10px #0C1989;
@@ -18,10 +18,10 @@
 	scroll: auto;
 }
 
-.right_quote{
+.right_quote {
 	float: right;
 	border-radius: 50px 50px 50px 50px;
-	box-shadow: 0px 0px 10px #0C1989;	
+	box-shadow: 0px 0px 10px #0C1989;
 	margin: 30px;
 	-moz-box-shadow: 0 0 8px #0C1989;
 	-webkit-box-shadow: 0 0 8px #0C1989;
@@ -32,49 +32,57 @@
 	scroll: auto;
 }
 
-
-#stuff{
+/*
+#stuff {
 	clear: both;
-	position:absolute;
+	position: absolute;
 	right: 50%;
 	width: 50%;
 	top: 90%;
 	margin-top: 50px;
 }
-#more{
-	right: 60%;	
+*/
+#more {
+	right: 60%;
 	top: 80%;
 	position: absolute;
 }
 
-#fts{/* done, perfect */
+#fts {
+	/* done, perfect */
+	
 	text-align: center;
 	width: 100%;
 	padding-right: 30%;
 }
 
-.center{/* done, perfect */
+.center {
+	/* done, perfect */
+	
 	padding-left: 25%;
 	margin-top: 25px;
-	
 }
-#overwhelmed{
+
+#overwhelmed {
 	border-radius: 50px 50px 50px 50px;
 	padding: 10px;
-	
 }
-#overwhelmed:focus{
+
+#overwhelmed:focus {
 	outline: none !important;
-    box-shadow: 0 0 10px #0C1989;
+	box-shadow: 0 0 10px #0C1989;
 }
-.feedback{
+
+.feedback {
 	border-radius: 50px 50px 50px 50px;
 	padding: 10px;
 }
 
-.feedback:focus{/* done */
-    outline: none !important;
-	 box-shadow: 0 0 10px #0C1989;
-};
-
+.feedback:focus {
+	/* done */
 	
+	outline: none !important;
+	box-shadow: 0 0 10px #0C1989;
+}
+
+;
