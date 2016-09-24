@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.charlie_says{
+	postion: relative;
+}
+
+.left_quote{
+	float: left;
+	border-radius: 50px 50px 50px 50px;
+	box-shadow: 0px 0px 10px #0C1989;
+	margin: 30px;
+	-moz-box-shadow: 0 0 10px #0C1989;
+	-webkit-box-shadow: 0 0 10px #0C1989;
+	padding: 15px;
+	width: calc(50% - 35px);
+	height: calc(80% / 3);
+	scroll: auto;
+}
+
+.right_quote{
+	float: right;
+	border-radius: 50px 50px 50px 50px;
+	box-shadow: 0px 0px 10px #0C1989;	
+	margin: 30px;
+	-moz-box-shadow: 0 0 8px #0C1989;
+	-webkit-box-shadow: 0 0 8px #0C1989;
+	padding: 15px;
+	width: calc(50% - 35px);
+	text-align: right;
+	height: calc(80% / 3);
+	scroll: auto;
+}
+
+
+#stuff{
+	clear: both;
+	position:absolute;
+	right: 50%;
+	width: 50%;
+	top: 90%;
+	margin-top: 50px;
+}
+#more{
+	right: 60%;	
+	top: 80%;
+	position: absolute;
+}
+
+#fts{/* done, perfect */
+	text-align: center;
+	width: 100%;
+	padding-right: 30%;
+}
+
+.center{/* done, perfect */
+	padding-left: 25%;
+	margin-top: 25px;
+	
+}
+
+.feedback{
+	border-radius: 50px 50px 50px 50px;
+}
+
+.feedback:focus{/* done */
+    outline: none !important;
+    border-color: #0C1989;
+    box-shadow: 0 0 10px #0C1989;
+};
+}
+	
