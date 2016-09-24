@@ -60,7 +60,6 @@ li {
 }
 
 #col1 {
-	/*adding border radius here doesnt work, only on img*/
 	border-radius: 5px 30px 5px 30px;
 }
 
@@ -72,7 +71,6 @@ li {
 
 #col2 {
 	/*width of img is wider than div*/
-	
 	left: calc(100% / 3);
 	margin-right: 3px;
 	margin-left: 3px;
@@ -80,20 +78,20 @@ li {
 }
 
 #col2 img {
-	left: calc(100% - 6px);
+	width: calc(100% - 6px);
 	height: 100%;
 	border-radius: 30px 30px 30px 30px;
 }
 
 #col3 {
-	left: 69%;
+	position:absolute;
+	left: calc(100% - 33.1%);
 	border-radius: 30px 5px 30px 5px;
 }
 
 #col3 img {
 	/*not sure why the width is messed up now*/
-	
-	width: calc(100% -6px);
+	width: calc(100% - 6px);
 	height: 100%;
 	border-radius: 30px 5px 30px 5px;
 }
@@ -110,7 +108,6 @@ li {
 
 #overlay2 {
 	/*added margin to center column*/
-	
 	position: absolute;
 	top: 100%;
 	width: calc(100% - 6px);
@@ -119,7 +116,7 @@ li {
 	opacity: 0;
 	border-radius: 5px 30px 5px 30px;
 	margin-right: 3px;
-	margin-left: 3px;
+
 }
 
 #overlay3 {
