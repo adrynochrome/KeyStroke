@@ -4,10 +4,12 @@
 #qr {
 	vertical-align: text-bottom;
 	float: left;
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 }
 
 #paypal {
 	float: right;
+	width: 250px;
+	height: 80px;
 }
