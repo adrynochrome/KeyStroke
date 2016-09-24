@@ -10,7 +10,6 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="jquery-ui.js"></script>
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="index_style.css" rel="stylesheet" type="text/css" />
 	<link href="contact.css" rel="stylesheet" type="text/css" />
 	<link href="jquery-ui.css" rel="stylesheet" type="text/css" />
 </head>
@@ -19,7 +18,9 @@
 	<div id="banner">
 		<a href="index.html"><img src="imgs/banner.gif" /></a>
 	</div>
-	<div id="navbar">
+    
+    
+	<div id="navbar" class= "purple">
 		<ul>
 			<li><a href="index.html">Home</a> |</li>
 			<li> <a href="team.html">The Team</a> |</li>
@@ -28,9 +29,10 @@
 			<li><a href="pmt.html">Payments</a></li>
 		</ul>
 	</div>
-	<div id="content">
-		<p> We offer free quotes and we accept a non-refundable 50% down payment based off of the initial quote. The remaining amount will not be collected until the site is complete and you are satisfied. For our clients paying entirely in BTC or cash, we offer a 10% discount. If you are a<a href="http://liberaterva.com" target="_new"> Liberate RVA</a> member, you can receive an additional 10% off.</p>
-		<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you</p>
+	<div id="content"><div class="purple">
+		<p> We offer free quotes and we accept a non-refundable 50% down payment based off of the initial quote. The remaining amount will not be collected until the site is complete and you are satisfied. For our clients paying entirely in BTC or cash, we offer a 10% discount. If you are a<a href="http://liberaterva.com" target="_new"> Liberate RVA</a> member, you can receive an additional 10% off.</p></div>
+        
+		<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you.</p>
 		<br />
 		<br />
 		
@@ -43,6 +45,7 @@
 			<input name="phone" type="text" /><br />
 			<p>Website name</p>
 			<input name="domain" type="text" /><br />
+            <div id = "nuts">
 			What kind of website are you interested in?<br />
 			<input name="type" type="radio" value="WordPress" />Wordpress<br />
 			<input name="type" type="radio" value="FromScratch" />From Scratch<br />
@@ -50,14 +53,21 @@
 			<input name="type" type="radio" value="Other" />Other
 			<input name="other" type="text" id="other" /><br />
 			<br />
+            </div>
+            
 			<p class="left">Please tell us a little bit about what you have in mind for your site, let us know if this is a revamp or if there is a site that you would like it modeled after</p>
 			<textarea name="description" required cols="40" rows="5" class="text"></textarea><br />
-			<p>If you have any visual representations or mock ups, feel free to upload them here:</p>
+			<p>If you have any visual representations or mock ups,<br /> feel free to upload them here:</p>
+            
+            <div id = "uploads">
 			<input name="image1" type="file" accept="image/*" size="10mb" class="upload" /><br />
 			<input name="image2" type="file" accept="image/*" size="10mb" class="upload" /><br />
+            </div><!--enduploads div---->
+            <br />
+            
 			<p>When would you like to launch the site?</p>
 			<input name="date" type="text" id="datepicker" /><br/>
-			<input name="submit" type="submit" value="Submit" class="button" />
+			<div class= "button"><input name="submit" type="submit" value="Submit"/></div>
 		</form>
 	</div>
 	
