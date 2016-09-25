@@ -30,26 +30,10 @@
 	</div>
 
 	<div id="content" class="charlie_says">
-		<div id="quote1" class="left_quote">
-			SUBMIT YOUR COMMENT BELOW TO TELL US WHAT YOU THINK OF OUR PROFESSIOAL WEB DESIGNS!
-			<br /> Bacon ipsum dolor amet kielbasa cupim filet mignon turkey beef ribs shankle. Shankle salami fatback beef ribs. Swine leberkas shank pancetta, jowl capicola kielbasa rump. Pancetta flank salami tail corned beef alcatra. Frankfurter meatball fatback ground round tenderloin. Swine jowl pork loin, t-bone kielbasa boudin sausage porchetta chuck cow short loin turducken. Turkey filet mignon meatball, t-bone ham ground round ball tip porchetta sirloin boudin. Frankfurter doner biltong, hamburger rump beef ribs ribeye sirloin. Sirloin corned beef porchetta pork loin. Pork chop beef rump cupim. Shank jerky leberkas pancetta sirloin.
+		<div id="quote-container">
 		</div>
-		<!--end quote1 div -->
-
-		<div id="quote2" class="right_quote">
-			"Charlie is okay I guess"
-			<br> -some stray cat on the street
-		</div>
-		<!--end quote2 div -->
-
-		<div id="quote3" class="left_quote">
-			IF YOU CAN SEE THIS, THIS PAGE IS STILL UNDER CONSTRUCTION
-			<br />Bacon ipsum dolor amet proident ad elit ball tip minim drumstick veniam salami. Enim fugiat salami, capicola qui laborum short loin sed kielbasa aliqua frankfurter mollit. Strip steak irure chuck quis shoulder mollit dolore. Shankle capicola beef non dolor, eu laborum reprehenderit ad consectetur meatball lorem officia duis andouille. Ut alcatra incididunt chicken, meatball venison shank hamburger consequat ribeye tenderloin filet mignon swine. Salami picanha do commodo sed.
-			<br> ---yaaaaaaasssss
-		</div>
-		<!--end quote3 div -->
-
-		<button id="more" action="get"> Load More...</button>
+		
+		<button id="more" onClick="loadMore(0, 2);"> Load More...</button>
 		<!-- CHARLIE, let's have it load three comments at a time and then you can load 3 more and so on and so forth. -->
 		<br />
 		
@@ -74,6 +58,7 @@
 	<script>
 		$( function() {
 			$("#stuff").hide();
+			loadMore(0,2);
 		});
 		
 		function openTestimony()
@@ -83,6 +68,164 @@
 					modal: true,
 					title: "Give a testimony"
 				});
+		}
+		
+		function loadMore(offset, length, max_key)
+		{
+			$.getJSON( "testimonialsLoadMore.php?offset=" + offset + "&length=" + length, function( data )
+			{
+				var items = [];
+				var cur_key = 0;
+				
+				$.each( data, function( key, val1 )
+				{
+					cur_key = key;
+					
+					if()
+					
+					if( (key % 2) === 0 )
+					{
+						$("#quote-container").append("<div id='quote" + key + "' class='left_quote'>");
+					}
+					else
+					{
+						$("#quote-container").append("<div id='quote" + key + "' class='right_quote'>");
+					}
+					
+					$.each( val1, function( key1, val )
+					{
+						if(key1 === "description")
+							$("#quote" + key).append("<p>" + val + "</p>");
+						if(key1 === "name")
+							$("#quote" + key).append("<span class='testimony-name'>" + val + "</span><br/>");
+						if(key1 === "link")
+							$("#quote" + key).append("<a href='" + val.link + "' class='testimony-link'>");
+						if(key1 === "siteName")
+							$("#quote" + key).append(val + "</a></div>");
+						
+//						items.join("");
+					});
+				});
+				
+				console.log(max_key);
+				$("#more").attr("onClick", "loadMore(" + max_key + ", " + (max_key + 2) + ");");
+			});
+		}
+	</script>
+</body>
+
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Testimonials</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="jquery-ui.js"></script>
+	<link href="jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="index_style.css" rel="stylesheet" type="text/css" />
+	<link href="testimonials.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="banner">
+		<a href="index.html"><img src="imgs/banner.gif" /></a>
+	</div>
+	<div id="navbar">
+		<ul>
+			<li><a href="index.html">Home</a> |</li>
+			<li> <a href="team.html">The Team</a> |</li>
+			<li> <a href="templates.html">Templates</a> |</li>
+			<li><a href="contact.html"> Contact Us</a> |</li>
+			<li><a href="testimonials.html"> Testimonials</a> |</li>
+			<li><a href="pmt.html">Payments</a></li>
+		</ul>
+	</div>
+
+	<div id="content" class="charlie_says">
+		<div id="quote-container">
+		</div>
+		
+		<button id="more" onClick="loadMore(0, 2);"> Load More...</button>
+		<!-- CHARLIE, let's have it load three comments at a time and then you can load 3 more and so on and so forth. -->
+		<br />
+		
+		<button id="comment" onClick="openTestimony();">Give a testimonial</button>
+
+		<div id="stuff" class="stuff">
+			<div id="fts">Let us know what you think!</div>
+			<textarea name="feedback" class="feedback" cols="50" rows="10"></textarea>
+			<br /> Your Name:
+			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" />
+			<br />
+			<div class="center">
+				<input name="do_it" type="submit" value="Submit" />
+			</div>
+			<!--charlie, when the user submits it should say "Thank you, your comment is awaiting approval" and then we get an e-mail, also include a captcha please! -->
+		</div>
+
+
+	</div>
+	<!--end content div -->
+	
+	<script>
+		$( function() {
+			$("#stuff").hide();
+			loadMore(0,2);
+		});
+		
+		function openTestimony()
+		{
+			$("#stuff").dialog(
+				{
+					modal: true,
+					title: "Give a testimony"
+				});
+		}
+		
+		function loadMore(offset, length, max_key)
+		{
+			$.getJSON( "testimonialsLoadMore.php?offset=" + offset + "&length=" + length, function( data )
+			{
+				var items = [];
+				var cur_key = 0;
+				
+				$.each( data, function( key, val1 )
+				{
+					cur_key = key;
+					
+					if()
+					
+					if( (key % 2) === 0 )
+					{
+						$("#quote-container").append("<div id='quote" + key + "' class='left_quote'>");
+					}
+					else
+					{
+						$("#quote-container").append("<div id='quote" + key + "' class='right_quote'>");
+					}
+					
+					$.each( val1, function( key1, val )
+					{
+						if(key1 === "description")
+							$("#quote" + key).append("<p>" + val + "</p>");
+						if(key1 === "name")
+							$("#quote" + key).append("<span class='testimony-name'>" + val + "</span><br/>");
+						if(key1 === "link")
+							$("#quote" + key).append("<a href='" + val.link + "' class='testimony-link'>");
+						if(key1 === "siteName")
+							$("#quote" + key).append(val + "</a></div>");
+						
+//						items.join("");
+					});
+				});
+				
+				console.log(max_key);
+				$("#more").attr("onClick", "loadMore(" + max_key + ", " + (max_key + 2) + ");");
+			});
 		}
 	</script>
 </body>
