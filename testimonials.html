@@ -37,13 +37,15 @@
 		<!-- CHARLIE, let's have it load three comments at a time and then you can load 3 more and so on and so forth. -->
 		<br />
 		
-		<button id="comment" onClick="openTestimony();">Give a testimonial</button>
+		<button id="comment" onClick="openTestimony();">Give a Testimonial</button>
 
 		<div id="stuff" class="stuff">
 			<div id="fts">Let us know what you think!</div>
-			<textarea name="feedback" class="feedback" cols="50" rows="10"></textarea>
-			<br /> Your Name:
-			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" />
+			<textarea name="feedback" class="feedback" cols="50" rows="10" required></textarea>
+			<br />
+			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Name" required/>
+			<br />
+			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Website" />
 			<br />
 			<div class="center">
 				<input name="do_it" type="submit" value="Submit" />
@@ -66,7 +68,7 @@
 			$("#stuff").dialog(
 				{
 					modal: true,
-					title: "Testify"
+					title: "Testify!"
 				});
 		}
 		
