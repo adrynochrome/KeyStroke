@@ -58,7 +58,7 @@
 	<script>
 		$( function() {
 			$("#stuff").hide();
-			loadMore(0,2);
+			loadMore(0,1,-1);
 		});
 		
 		function openTestimony()
@@ -74,41 +74,40 @@
 		{
 			$.getJSON( "testimonialsLoadMore.php?offset=" + offset + "&length=" + length, function( data )
 			{
-				var items = [];
 				var cur_key = 0;
 				
 				$.each( data, function( key, val1 )
 				{
 					cur_key = key;
 					
-					if()
-					
-					if( (key % 2) === 0 )
+					if( max_key < cur_key )
 					{
-						$("#quote-container").append("<div id='quote" + key + "' class='left_quote'>");
-					}
-					else
-					{
-						$("#quote-container").append("<div id='quote" + key + "' class='right_quote'>");
-					}
-					
-					$.each( val1, function( key1, val )
-					{
-						if(key1 === "description")
-							$("#quote" + key).append("<p>" + val + "</p>");
-						if(key1 === "name")
-							$("#quote" + key).append("<span class='testimony-name'>" + val + "</span><br/>");
-						if(key1 === "link")
-							$("#quote" + key).append("<a href='" + val.link + "' class='testimony-link'>");
-						if(key1 === "siteName")
-							$("#quote" + key).append(val + "</a></div>");
+						if( (key % 2) === 0 )
+						{
+							$("#quote-container").append("<div id='quote" + key + "' class='left_quote'>");
+						}
+						else
+						{
+							$("#quote-container").append("<div id='quote" + key + "' class='right_quote'>");
+						}
 						
-//						items.join("");
-					});
+						$.each( val1, function( key1, val )
+						{
+							if(key1 === "description")
+								$("#quote" + key).append("<p>" + val + "</p>");
+							if(key1 === "name")
+								$("#quote" + key).append("<span class='testimony-name'>" + val + "</span><br/>");
+							if(key1 === "link")
+								$("#quote" + key).append("<a href='" + val.link + "' class='testimony-link'>");
+							if(key1 === "siteName")
+								$("#quote" + key).append(val + "</a></div>");
+						});
+						max_key = key;
+					}
 				});
 				
 				console.log(max_key);
-				$("#more").attr("onClick", "loadMore(" + max_key + ", " + (max_key + 2) + ");");
+				$("#more").attr("onClick", "loadMore(" + (key + 1) + ", " + (key + 2) + ", " + max_key + ");");
 			});
 		}
 	</script>
