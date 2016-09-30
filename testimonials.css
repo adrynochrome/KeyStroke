@@ -32,40 +32,37 @@
 	scroll: auto;
 }
 
-/*
+
 #stuff {
 	clear: both;
-	position: absolute;
-	right: 50%;
-	width: 50%;
-	top: 90%;
-	margin-top: 50px;
+	margin-top: 10px;
 }
-*/
+
 #more {
-	right: 60%;
-	top: 80%;
+	left: 45%;
 	position: absolute;
+}
+#comment {
+	left: 43.5%;
+	position: absolute;
+	margin-top: 20px;
 }
 
 #fts {
-	/* done, perfect */
-	
 	text-align: center;
 	width: 100%;
-	padding-right: 30%;
 }
 
 .center {
-	/* done, perfect */
-	
-	padding-left: 25%;
-	margin-top: 25px;
+	margin-top: 10px;
+	position: absolute;
+	left: 45%;
 }
 
-#overwhelmed {
+.overwhelmed {
 	border-radius: 50px 50px 50px 50px;
-	padding: 10px;
+	margin-top: 10px;
+	padding: 2px;
 }
 
 #overwhelmed:focus {
