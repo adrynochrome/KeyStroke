@@ -2,205 +2,25 @@
 { /*! Jssor */
 	new(function() {});
 	var e = {
-			Rc: function(a)
+			le: function(a)
 			{
 				return -c.cos(a * c.PI) / 2 + .5
 			},
-			Sc: function(a)
+			ke: function(a)
 			{
 				return a
 			},
-			Oe: function(a)
-			{
-				return a * a
-			},
-			Wc: function(a)
+			je: function(a)
 			{
 				return -a * (a - 2)
 			},
-			Pe: function(a)
-			{
-				return (a *= 2) < 1 ? 1 / 2 * a * a : -1 / 2 * (--a * (a - 2) - 1)
-			},
-			Qe: function(a)
-			{
-				return a * a * a
-			},
-			Re: function(a)
-			{
-				return (a -= 1) * a * a + 1
-			},
-			Se: function(a)
-			{
-				return (a *= 2) < 1 ? 1 / 2 * a * a * a : 1 / 2 * ((a -= 2) * a * a + 2)
-			},
-			Te: function(a)
-			{
-				return a * a * a * a
-			},
-			Ue: function(a)
-			{
-				return -((a -= 1) * a * a * a - 1)
-			},
-			Ve: function(a)
-			{
-				return (a *= 2) < 1 ? 1 / 2 * a * a * a * a : -1 / 2 * ((a -= 2) * a * a * a - 2)
-			},
-			We: function(a)
-			{
-				return a * a * a * a * a
-			},
-			Xe: function(a)
+			ee: function(a)
 			{
 				return (a -= 1) * a * a * a * a + 1
-			},
-			Ye: function(a)
-			{
-				return (a *= 2) < 1 ? 1 / 2 * a * a * a * a * a : 1 / 2 * ((a -= 2) * a * a * a * a + 2)
-			},
-			af: function(a)
-			{
-				return 1 - c.cos(c.PI / 2 * a)
-			},
-			of: function(a)
-			{
-				return c.sin(c.PI / 2 * a)
-			},
-			bf: function(a)
-			{
-				return -1 / 2 * (c.cos(c.PI * a) - 1)
-			},
-			cf: function(a)
-			{
-				return a == 0 ? 0 : c.pow(2, 10 * (a - 1))
-			},
-			df: function(a)
-			{
-				return a == 1 ? 1 : -c.pow(2, -10 * a) + 1
-			},
-			ef: function(a)
-			{
-				return a == 0 || a == 1 ? a : (a *= 2) < 1 ? 1 / 2 * c.pow(2, 10 * (a - 1)) : 1 / 2 * (-c.pow(2, -10 * --a) + 2)
-			},
-			ff: function(a)
-			{
-				return -(c.sqrt(1 - a * a) - 1)
-			},
-			gf: function(a)
-			{
-				return c.sqrt(1 - (a -= 1) * a)
-			},
-			hf: function(a)
-			{
-				return (a *= 2) < 1 ? -1 / 2 * (c.sqrt(1 - a * a) - 1) : 1 / 2 * (c.sqrt(1 - (a -= 2) * a) + 1)
-			},
-			jf: function(a)
-			{
-				if (!a || a == 1) return a;
-				var b = .3,
-					d = .075;
-				return -(c.pow(2, 10 * (a -= 1)) * c.sin((a - d) * 2 * c.PI / b))
-			},
-			kf: function(a)
-			{
-				if (!a || a == 1) return a;
-				var b = .3,
-					d = .075;
-				return c.pow(2, -10 * a) * c.sin((a - d) * 2 * c.PI / b) + 1
-			},
-			lf: function(a)
-			{
-				if (!a || a == 1) return a;
-				var b = .45,
-					d = .1125;
-				return (a *= 2) < 1 ? -.5 * c.pow(2, 10 * (a -= 1)) * c.sin((a - d) * 2 * c.PI / b) : c.pow(2, -10 * (a -= 1)) * c.sin((a - d) * 2 * c.PI / b) * .5 + 1
-			},
-			mf: function(a)
-			{
-				var b = 1.70158;
-				return a * a * ((b + 1) * a - b)
-			},
-			nf: function(a)
-			{
-				var b = 1.70158;
-				return (a -= 1) * a * ((b + 1) * a + b) + 1
-			},
-			Ne: function(a)
-			{
-				var b = 1.70158;
-				return (a *= 2) < 1 ? 1 / 2 * a * a * (((b *= 1.525) + 1) * a - b) : 1 / 2 * ((a -= 2) * a * (((b *= 1.525) + 1) * a + b) + 2)
-			},
-			fd: function(a)
-			{
-				return 1 - e.lc(1 - a)
-			},
-			lc: function(a)
-			{
-				return a < 1 / 2.75 ? 7.5625 * a * a : a < 2 / 2.75 ? 7.5625 * (a -= 1.5 / 2.75) * a + .75 : a < 2.5 / 2.75 ? 7.5625 * (a -= 2.25 / 2.75) * a + .9375 : 7.5625 * (a -= 2.625 / 2.75) * a + .984375
-			},
-			Me: function(a)
-			{
-				return a < 1 / 2 ? e.fd(a * 2) * .5 : e.lc(a * 2 - 1) * .5 + .5
-			},
-			Le: function()
-			{
-				return 1 - c.abs(1)
-			},
-			Ke: function(a)
-			{
-				return 1 - c.cos(a * c.PI * 2)
-			},
-			le: function(a)
-			{
-				return c.sin(a * c.PI * 2)
-			},
-			me: function(a)
-			{
-				return 1 - ((a *= 2) < 1 ? (a = 1 - a) * a * a : (a -= 1) * a * a)
-			},
-			ne: function(a)
-			{
-				return (a *= 2) < 1 ? a * a * a : (a = 2 - a) * a * a
 			}
 		},
 		f = {
-			oe: e.Rc,
-			pe: e.Sc,
-			qe: e.Oe,
-			re: e.Wc,
-			se: e.Pe,
-			te: e.Qe,
-			ue: e.Re,
-			ve: e.Se,
-			we: e.Te,
-			xe: e.Ue,
-			ye: e.Ve,
-			ze: e.We,
-			Tc: e.Xe,
-			Ae: e.Ye,
-			Be: e.af,
-			Ce: e.of,
-			De: e.bf,
-			Ee: e.cf,
-			Fe: e.df,
-			Ge: e.ef,
-			He: e.ff,
-			Ie: e.gf,
-			qf: e.hf,
-			Ze: e.jf,
-			pf: e.kf,
-			sf: e.lf,
-			rf: e.mf,
-			tg: e.nf,
-			Wf: e.Ne,
-			Xf: e.fd,
-			Yf: e.lc,
-			Zf: e.Me,
-			ag: e.Le,
-			bg: e.Ke,
-			cg: e.le,
-			dg: e.me,
-			eg: e.ne
+			Xd: e.ee
 		};
 	var b = new function()
 	{
@@ -226,10 +46,10 @@
 			if (!G)
 			{
 				G = {
-					Ef: "ontouchstart" in g || "createTouch" in h
+					Ge: "ontouchstart" in g || "createTouch" in h
 				};
 				var a;
-				if (I.pointerEnabled || (a = I.msPointerEnabled)) G.kd = a ? "msTouchAction" : "touchAction"
+				if (I.pointerEnabled || (a = I.msPointerEnabled)) G.dd = a ? "msTouchAction" : "touchAction"
 			}
 			return G
 		}
@@ -432,26 +252,26 @@
 		{
 			if (i < 9) b.style.filter = a
 		}
-		f.Uf = Ib;
-		f.Pc = q;
-		f.vf = db;
-		f.yf = J;
-		f.uc = O;
+		f.Te = Ib;
+		f.ed = q;
+		f.Ae = db;
+		f.xe = J;
+		f.Sc = O;
 		wb("transform");
-		f.vc = function()
+		f.xc = function()
 		{
 			return i
 		};
-		f.xc = rb;
+		f.wc = rb;
 
 		function Y(a)
 		{
-			a.constructor === Y.caller && a.Dc && a.Dc.apply(a, Y.caller.arguments)
+			a.constructor === Y.caller && a.tc && a.tc.apply(a, Y.caller.arguments)
 		}
-		f.Dc = Y;
-		f.jb = function(a)
+		f.tc = Y;
+		f.ib = function(a)
 		{
-			if (f.Cf(a)) a = h.getElementById(a);
+			if (f.ue(a)) a = h.getElementById(a);
 			return a
 		};
 
@@ -459,15 +279,15 @@
 		{
 			return a || g.event
 		}
-		f.Ec = t;
-		f.Zb = function(b)
+		f.sc = t;
+		f.Sb = function(b)
 		{
 			b = t(b);
 			var a = b.target || b.srcElement || h;
-			if (a.nodeType == 3) a = f.zc(a);
+			if (a.nodeType == 3) a = f.pc(a);
 			return a
 		};
-		f.Hc = function(a)
+		f.uc = function(a)
 		{
 			a = t(a);
 			return {
@@ -539,17 +359,17 @@
 			else b.style.opacity = a == 1 ? "" : c.round(a * 100) / 100
 		}
 		var L = {
-			db: ["rotate"],
-			W: ["rotateX"],
-			T: ["rotateY"],
-			Ob: ["skewX"],
-			Hb: ["skewY"]
+			Z: ["rotate"],
+			N: ["rotateX"],
+			O: ["rotateY"],
+			Ab: ["skewX"],
+			Bb: ["skewY"]
 		};
 		if (!J()) L = B(L,
 		{
 			p: ["scaleX", 2],
-			n: ["scaleY", 2],
-			Q: ["translateZ", 1]
+			q: ["scaleY", 2],
+			P: ["translateZ", 1]
 		});
 
 		function M(d, a)
@@ -559,11 +379,11 @@
 			{
 				if (q() && i && i < 10)
 				{
-					delete a.W;
-					delete a.T;
-					delete a.Q
+					delete a.N;
+					delete a.O;
+					delete a.P
 				}
-				b.c(a, function(d, b)
+				b.e(a, function(d, b)
 				{
 					var a = L[b];
 					if (a)
@@ -574,20 +394,20 @@
 				});
 				if (J())
 				{
-					if (a.Y || a.eb || a.Q) c += " translate3d(" + (a.Y || 0) + "px," + (a.eb || 0) + "px," + (a.Q || 0) + "px)";
+					if (a.Y || a.W || a.P) c += " translate3d(" + (a.Y || 0) + "px," + (a.W || 0) + "px," + (a.P || 0) + "px)";
 					if (a.p == l) a.p = 1;
-					if (a.n == l) a.n = 1;
-					if (a.p != 1 || a.n != 1) c += " scale3d(" + a.p + ", " + a.n + ", 1)"
+					if (a.q == l) a.q = 1;
+					if (a.p != 1 || a.q != 1) c += " scale3d(" + a.p + ", " + a.q + ", 1)"
 				}
 			}
 			d.style[K(d)] = c
 		}
-		f.Fc = m("transformOrigin", 4);
-		f.Ff = m("backfaceVisibility", 4);
-		f.je = m("transformStyle", 4);
-		f.Sf = m("perspective", 6);
-		f.Gf = m("perspectiveOrigin", 4);
-		f.Hf = function(a, b)
+		f.Ac = m("transformOrigin", 4);
+		f.Id = m("backfaceVisibility", 4);
+		f.se = m("transformStyle", 4);
+		f.re = m("perspective", 6);
+		f.Ee = m("perspectiveOrigin", 4);
+		f.Ue = function(a, b)
 		{
 			if (q() && s < 9 || s < 10 && Q()) a.style.zoom = b == 1 ? "" : b;
 			else
@@ -600,19 +420,19 @@
 				a.style[c] = d
 			}
 		};
-		f.dc = function(b, a)
+		f.Pb = function(b, a)
 		{
 			return function(c)
 			{
 				c = t(c);
 				var e = c.type,
 					d = c.relatedTarget || (e == "mouseout" ? c.toElement : c.fromElement);
-				(!d || d !== a && !f.If(a, d)) && b(c)
+				(!d || d !== a && !f.Ce(a, d)) && b(c)
 			}
 		};
 		f.a = function(a, d, b, c)
 		{
-			a = f.jb(a);
+			a = f.ib(a);
 			if (a.addEventListener)
 			{
 				d == "mousewheel" && a.addEventListener("DOMMouseScroll", b, c);
@@ -624,9 +444,9 @@
 				c && a.setCapture && a.setCapture()
 			}
 		};
-		f.I = function(a, c, d, b)
+		f.A = function(a, c, d, b)
 		{
-			a = f.jb(a);
+			a = f.ib(a);
 			if (a.removeEventListener)
 			{
 				c == "mousewheel" && a.removeEventListener("DOMMouseScroll", d, b);
@@ -638,20 +458,20 @@
 				b && a.releaseCapture && a.releaseCapture()
 			}
 		};
-		f.Eb = function(a)
+		f.Ib = function(a)
 		{
 			a = t(a);
 			a.preventDefault && a.preventDefault();
 			a.cancel = d;
 			a.returnValue = k
 		};
-		f.Jf = function(a)
+		f.De = function(a)
 		{
 			a = t(a);
 			a.stopPropagation && a.stopPropagation();
 			a.cancelBubble = d
 		};
-		f.G = function(d, c)
+		f.D = function(d, c)
 		{
 			var a = [].slice.call(arguments, 2),
 				b = function()
@@ -661,14 +481,14 @@
 				};
 			return b
 		};
-		f.Kc = function(a, b)
+		f.Hc = function(a, b)
 		{
 			if (b == l) return a.textContent || a.innerText;
 			var c = h.createTextNode(b);
-			f.kc(a);
+			f.Jb(a);
 			a.appendChild(c)
 		};
-		f.xb = function(d, c)
+		f.Hb = function(d, c)
 		{
 			for (var b = [], a = d.firstChild; a; a = a.nextSibling)(c || a.nodeType == 1) && b.push(a);
 			return b
@@ -688,7 +508,7 @@
 					}
 				}
 		}
-		f.u = mb;
+		f.o = mb;
 
 		function S(a, d, f, b)
 		{
@@ -706,7 +526,7 @@
 				}
 			return c
 		}
-		f.Mf = S;
+		f.Fd = S;
 
 		function gb(a, c, d)
 		{
@@ -721,8 +541,8 @@
 					}
 				}
 		}
-		f.Nf = gb;
-		f.Pf = function(b, a)
+		f.td = gb;
+		f.ud = function(b, a)
 		{
 			return b.getElementsByTagName(a)
 		};
@@ -747,9 +567,9 @@
 							{}, h, a) : a
 						}
 					}
-			return d
+				return d
 		}
-		f.H = B;
+		f.bb = B;
 
 		function Z(f, g)
 		{
@@ -771,34 +591,33 @@
 			}
 			return d
 		}
-		f.Mc = function(a)
+		f.vc = function(a)
 		{
 			return C(a) == "function"
 		};
-		f.Cf = function(a)
+		f.ue = function(a)
 		{
 			return C(a) == "string"
 		};
-		f.sc = function(a)
+		f.sd = function(a)
 		{
 			return !isNaN(p(a)) && isFinite(a)
 		};
-		f.c = n;
-		f.Rf = A;
+		f.e = n;
 
 		function R(a)
 		{
 			return h.createElement(a)
 		}
-		f.zb = function()
+		f.mb = function()
 		{
 			return R("DIV")
 		};
-		f.Je = function()
+		f.Bd = function()
 		{
 			return R("SPAN")
 		};
-		f.yc = function() {};
+		f.bd = function() {};
 
 		function V(b, c, a)
 		{
@@ -810,15 +629,15 @@
 		{
 			return V(a, b) || V(a, "data-" + b)
 		}
-		f.A = V;
-		f.j = U;
+		f.n = V;
+		f.g = U;
 
 		function x(b, a)
 		{
 			if (a == l) return b.className;
 			b.className = a
 		}
-		f.Oc = x;
+		f.Mc = x;
 
 		function qb(b)
 		{
@@ -856,77 +675,77 @@
 		{
 			x(a, bb(" ", B(Z(P(x(a)), P(c)), P(b))))
 		}
-		f.zc = function(a)
+		f.pc = function(a)
 		{
 			return a.parentNode
 		};
-		f.M = function(a)
+		f.G = function(a)
 		{
-			f.V(a, "none")
+			f.H(a, "none")
 		};
-		f.O = function(a, b)
+		f.I = function(a, b)
 		{
-			f.V(a, b ? "none" : "")
+			f.H(a, b ? "none" : "")
 		};
-		f.ge = function(b, a)
+		f.pd = function(b, a)
 		{
 			b.removeAttribute(a)
 		};
-		f.Zd = function()
+		f.Hd = function()
 		{
 			return q() && i < 10
 		};
-		f.Xd = function(d, a)
+		f.rd = function(d, a)
 		{
-			if (a) d.style.clip = "rect(" + c.round(a.i || a.s || 0) + "px " + c.round(a.F) + "px " + c.round(a.B) + "px " + c.round(a.g || a.z || 0) + "px)";
+			if (a) d.style.clip = "rect(" + c.round(a.i || a.m || 0) + "px " + c.round(a.s) + "px " + c.round(a.z) + "px " + c.round(a.j || a.r || 0) + "px)";
 			else if (a !== l)
 			{
 				var g = d.style.cssText,
 					f = [new RegExp(/[\s]*clip: rect\(.*?\)[;]?/i), new RegExp(/[\s]*cliptop: .*?[;]?/i), new RegExp(/[\s]*clipright: .*?[;]?/i), new RegExp(/[\s]*clipbottom: .*?[;]?/i), new RegExp(/[\s]*clipleft: .*?[;]?/i)],
 					e = H(g, f, "");
-				b.kb(d, e)
+				b.cb(d, e)
 			}
 		};
-		f.R = function()
+		f.L = function()
 		{
 			return +new Date
 		};
-		f.K = function(b, a)
+		f.E = function(b, a)
 		{
 			b.appendChild(a)
 		};
-		f.Mb = function(b, a, c)
+		f.Eb = function(b, a, c)
 		{
 			(c || a.parentNode).insertBefore(b, a)
 		};
-		f.Fb = function(b, a)
+		f.vb = function(b, a)
 		{
 			a = a || b.parentNode;
 			a && a.removeChild(b)
 		};
-		f.Id = function(a, b)
+		f.Ad = function(a, b)
 		{
 			n(a, function(a)
 			{
-				f.Fb(a, b)
+				f.vb(a, b)
 			})
 		};
-		f.kc = function(a)
+		f.Jb = function(a)
 		{
-			f.Id(f.xb(a, d), a)
+			f.Ad(f.Hb(a, d), a)
 		};
-		f.Jd = function(a, b)
+		f.Dd = function(a, b)
 		{
-			var c = f.zc(a);
-			b & 1 && f.D(a, (f.l(c) - f.l(a)) / 2);
-			b & 2 && f.E(a, (f.m(c) - f.m(a)) / 2)
+			var c = f.pc(a);
+			b & 1 && f.B(a, (f.k(c) - f.k(a)) / 2);
+			b & 2 && f.C(a, (f.l(c) - f.l(a)) / 2)
 		};
-		f.Xb = function(b, a)
+		f.Ed = function(b, a)
 		{
 			return parseInt(b, a || 10)
 		};
-		f.Kd = p;
-		f.If = function(b, a)
+		f.Cd = p;
+		f.Ce = function(b, a)
 		{
 			var c = h.body;
 			while (a && b !== a && c !== a) try
@@ -943,19 +762,19 @@
 		function W(d, c, b)
 		{
 			var a = d.cloneNode(!c);
-			!b && f.ge(a, "id");
+			!b && f.pd(a, "id");
 			return a
 		}
-		f.gb = W;
-		f.hb = function(e, g)
+		f.sb = W;
+		f.nb = function(e, g)
 		{
 			var a = new Image;
 
 			function b(e, d)
 			{
-				f.I(a, "load", b);
-				f.I(a, "abort", c);
-				f.I(a, "error", c);
+				f.A(a, "load", b);
+				f.A(a, "abort", c);
+				f.A(a, "error", c);
 				g && g(a, d)
 			}
 
@@ -972,7 +791,7 @@
 				a.src = e
 			}
 		};
-		f.Ld = function(d, a, e)
+		f.zd = function(d, a, e)
 		{
 			var c = d.length + 1;
 
@@ -984,23 +803,23 @@
 			}
 			n(d, function(a)
 			{
-				f.hb(a.src, b)
+				f.nb(a.src, b)
 			});
 			b()
 		};
-		f.Md = function(a, g, i, h)
+		f.yd = function(a, g, i, h)
 		{
 			if (h) a = W(a);
 			var c = S(a, g);
-			if (!c.length) c = b.Pf(a, g);
+			if (!c.length) c = b.ud(a, g);
 			for (var f = c.length - 1; f > -1; f--)
 			{
 				var d = c[f],
 					e = W(i);
 				x(e, x(d));
-				b.kb(e, d.style.cssText);
-				b.Mb(e, d);
-				b.Fb(d)
+				b.cb(e, d.style.cssText);
+				b.Eb(e, d);
+				b.vb(d)
 			}
 			return a
 		};
@@ -1018,21 +837,21 @@
 			function i()
 			{
 				E(a, q, e[d || j || g & 2 || g]);
-				b.X(a, "pointer-events", d ? "none" : "")
+				b.Q(a, "pointer-events", d ? "none" : "")
 			}
 
 			function c()
 			{
 				j = 0;
 				i();
-				f.I(h, "mouseup", c);
-				f.I(h, "touchend", c);
-				f.I(h, "touchcancel", c)
+				f.A(h, "mouseup", c);
+				f.A(h, "touchend", c);
+				f.A(h, "touchcancel", c)
 			}
 
 			function o(a)
 			{
-				if (d) f.Eb(a);
+				if (d) f.Ib(a);
 				else
 				{
 					j = 4;
@@ -1042,19 +861,19 @@
 					f.a(h, "touchcancel", c)
 				}
 			}
-			k.Nd = function(a)
+			k.wd = function(a)
 			{
 				if (a === l) return g;
 				g = a & 2 || a & 1;
 				i()
 			};
-			k.sd = function(a)
+			k.zc = function(a)
 			{
 				if (a === l) return !d;
 				d = a ? 0 : 3;
 				i()
 			};
-			k.J = a = f.jb(a);
+			k.S = a = f.ib(a);
 			var m = b.xd(x(a));
 			if (m) p = m.shift();
 			n(r, function(a)
@@ -1066,40 +885,40 @@
 			f.a(a, "mousedown", o);
 			f.a(a, "touchstart", o)
 		}
-		f.bc = function(a)
+		f.Ob = function(a)
 		{
 			return new Gb(a)
 		};
-		f.X = D;
-		f.Pb = m("overflow");
-		f.E = m("top", 2);
-		f.D = m("left", 2);
-		f.l = m("width", 2);
-		f.m = m("height", 2);
-		f.Od = m("marginLeft", 2);
-		f.Pd = m("marginTop", 2);
-		f.C = m("position");
-		f.V = m("display");
-		f.q = m("zIndex", 1);
-		f.mc = function(b, a, c)
+		f.Q = D;
+		f.Cb = m("overflow");
+		f.C = m("top", 2);
+		f.B = m("left", 2);
+		f.k = m("width", 2);
+		f.l = m("height", 2);
+		f.ld = m("marginLeft", 2);
+		f.nd = m("marginTop", 2);
+		f.v = m("position");
+		f.H = m("display");
+		f.u = m("zIndex", 1);
+		f.Lb = function(b, a, c)
 		{
 			if (a != l) Fb(b, a, c);
 			else return Db(b)
 		};
-		f.kb = function(a, b)
+		f.cb = function(a, b)
 		{
 			if (b != l) a.style.cssText = b;
 			else return a.style.cssText
 		};
 		var T = {
-			sb: f.mc,
-			i: f.E,
-			g: f.D,
-			qb: f.l,
-			pb: f.m,
-			nb: f.C,
-			Cg: f.V,
-			mb: f.q
+			fb: f.Lb,
+			i: f.C,
+			j: f.B,
+			ub: f.k,
+			xb: f.l,
+			db: f.v,
+			df: f.H,
+			gb: f.u
 		};
 
 		function w(g, k)
@@ -1111,11 +930,11 @@
 
 			function i(b, d, a)
 			{
-				var e = b.cb(u(-d / 2, -a / 2)),
-					f = b.cb(u(d / 2, -a / 2)),
-					g = b.cb(u(d / 2, a / 2)),
-					h = b.cb(u(-d / 2, a / 2));
-				b.cb(u(300, 300));
+				var e = b.ab(u(-d / 2, -a / 2)),
+					f = b.ab(u(d / 2, -a / 2)),
+					g = b.ab(u(d / 2, a / 2)),
+					h = b.ab(u(-d / 2, a / 2));
+				b.ab(u(300, 300));
 				return u(c.min(e.x, f.x, g.x, h.x) + d / 2, c.min(e.y, f.y, g.y, h.y) + a / 2)
 			}
 
@@ -1123,13 +942,13 @@
 			{
 				a = a ||
 				{};
-				var n = a.Q || 0,
-					p = (a.W || 0) % 360,
-					q = (a.T || 0) % 360,
-					u = (a.db || 0) % 360,
+				var n = a.P || 0,
+					p = (a.N || 0) % 360,
+					q = (a.O || 0) % 360,
+					u = (a.Z || 0) % 360,
 					k = a.p,
-					m = a.n,
-					g = a.Ag;
+					m = a.q,
+					g = a.cf;
 				if (k == l) k = 1;
 				if (m == l) m = 1;
 				if (g == l) g = 1;
@@ -1140,16 +959,16 @@
 					q = 0;
 					g = 0
 				}
-				var c = new Cb(a.Y, a.eb, n);
-				c.W(p);
-				c.T(q);
-				c.Td(u);
-				c.Ud(a.Ob, a.Hb);
-				c.fc(k, m, g);
+				var c = new Cb(a.Y, a.W, n);
+				c.N(p);
+				c.O(q);
+				c.md(u);
+				c.ne(a.Ab, a.Bb);
+				c.jc(k, m, g);
 				if (b)
 				{
-					c.tb(a.z, a.s);
-					d.style[h] = c.Vd()
+					c.jb(a.r, a.m);
+					d.style[h] = c.Jd()
 				}
 				else if (!X || X < 9)
 				{
@@ -1158,10 +977,10 @@
 							x: 0,
 							y: 0
 						};
-					if (a.P) j = i(c, a.P, a.Z);
-					f.Pd(d, j.y);
-					f.Od(d, j.x);
-					o = c.Wd();
+					if (a.M) j = i(c, a.M, a.V);
+					f.nd(d, j.y);
+					f.ld(d, j.x);
+					o = c.ze();
 					var s = d.style.filter,
 						t = new RegExp(/[\s]*progid:DXImageTransform\.Microsoft\.Matrix\([^\)]*\)/g),
 						r = H(s, [t], o);
@@ -1172,33 +991,33 @@
 			{
 				c = c ||
 				{};
-				var h = c.z,
-					i = c.s,
+				var h = c.r,
+					i = c.m,
 					g;
 				n(T, function(a, b)
 				{
 					g = c[b];
 					g !== l && a(e, g)
 				});
-				f.Xd(e, c.f);
+				f.rd(e, c.c);
 				if (!b)
 				{
-					h != l && f.D(e, (c.Uc || 0) + h);
-					i != l && f.E(e, (c.Vc || 0) + i)
+					h != l && f.B(e, (c.mc || 0) + h);
+					i != l && f.C(e, (c.nc || 0) + i)
 				}
-				if (c.Yd)
-					if (d) rb(f.G(j, M, e, c));
+				if (c.te)
+					if (d) rb(f.D(j, M, e, c));
 					else a(e, c)
 			};
-			f.Nb = M;
-			if (d) f.Nb = w;
-			if (e) f.Nb = a;
+			f.zb = M;
+			if (d) f.zb = w;
+			if (e) f.zb = a;
 			else if (!b) a = M;
-			f.N = w;
+			f.K = w;
 			w(g, k)
 		}
-		f.Nb = w;
-		f.N = w;
+		f.zb = w;
+		f.K = w;
 
 		function Cb(i, k, o)
 		{
@@ -1230,17 +1049,17 @@
 			{
 				return m.apply(j, (a || b).concat(c))
 			}
-			d.fc = function(a, c, d)
+			d.jc = function(a, c, d)
 			{
 				if (a != 1 || c != 1 || d != 1) b = e([a, 0, 0, 0, 0, c, 0, 0, 0, 0, d, 0, 0, 0, 0, 1])
 			};
-			d.tb = function(a, c, d)
+			d.jb = function(a, c, d)
 			{
 				b[12] += a || 0;
 				b[13] += c || 0;
 				b[14] += d || 0
 			};
-			d.W = function(c)
+			d.N = function(c)
 			{
 				if (c)
 				{
@@ -1250,7 +1069,7 @@
 					b = e([1, 0, 0, 0, 0, d, i, 0, 0, -i, d, 0, 0, 0, 0, 1])
 				}
 			};
-			d.T = function(c)
+			d.O = function(c)
 			{
 				if (c)
 				{
@@ -1260,7 +1079,7 @@
 					b = e([d, 0, -i, 0, 0, 1, 0, 0, i, 0, d, 0, 0, 0, 0, 1])
 				}
 			};
-			d.Td = function(c)
+			d.md = function(c)
 			{
 				if (c)
 				{
@@ -1270,7 +1089,7 @@
 					b = e([d, i, 0, 0, -i, d, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
 				}
 			};
-			d.Ud = function(a, c)
+			d.ne = function(a, c)
 			{
 				if (a || c)
 				{
@@ -1279,16 +1098,16 @@
 					b = e([1, l(k), 0, 0, l(i), 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
 				}
 			};
-			d.cb = function(c)
+			d.ab = function(c)
 			{
 				var a = e(b, [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, c.x, c.y, 0, 1]);
 				return n(a[12], a[13])
 			};
-			d.Vd = function()
+			d.Jd = function()
 			{
 				return "matrix3d(" + b.join(",") + ")"
 			};
-			d.Wd = function()
+			d.ze = function()
 			{
 				return "progid:DXImageTransform.Microsoft.Matrix(M11=" + b[0] + ", M12=" + b[4] + ", M21=" + b[1] + ", M22=" + b[5] + ", SizingMethod='auto expand')"
 			}
@@ -1309,20 +1128,20 @@
 			}
 			a.p = function(b, c)
 			{
-				return a.cd(b, c, 0)
+				return a.Rc(b, c, 0)
 			};
-			a.n = function(b, c)
+			a.q = function(b, c)
 			{
-				return a.cd(b, 0, c)
+				return a.Rc(b, 0, c)
 			};
-			a.cd = function(a, c, d)
+			a.Rc = function(a, c, d)
 			{
 				return b(a, [
 					[c, 0],
 					[0, d]
 				])
 			};
-			a.cb = function(d, c)
+			a.ab = function(d, c)
 			{
 				var a = b(d, [
 					[c.x],
@@ -1332,51 +1151,36 @@
 			}
 		};
 		var N = {
-			Uc: 0,
-			Vc: 0,
-			z: 0,
-			s: 0,
-			fb: 1,
+			mc: 0,
+			nc: 0,
+			r: 0,
+			m: 0,
+			U: 1,
 			p: 1,
-			n: 1,
-			db: 0,
-			W: 0,
-			T: 0,
+			q: 1,
+			Z: 0,
+			N: 0,
+			O: 0,
 			Y: 0,
-			eb: 0,
-			Q: 0,
-			Ob: 0,
-			Hb: 0
+			W: 0,
+			P: 0,
+			Ab: 0,
+			Bb: 0
 		};
-		f.ed = function(a)
+		f.Pd = function(a)
 		{
 			var c = a ||
 			{};
 			if (a)
-				if (b.Mc(a)) c = {
-					ec: c
+				if (b.vc(a)) c = {
+					ac: c
 				};
-				else if (b.Mc(a.f)) c.f = {
-				ec: a.f
+				else if (b.vc(a.c)) c.c = {
+				ac: a.c
 			};
 			return c
 		};
-
-		function pb(c, a)
-		{
-			var b = {};
-			n(c, function(c, d)
-			{
-				var e = c;
-				if (a[d] != l)
-					if (f.sc(c)) e = c + a[d];
-					else e = pb(c, a[d]);
-				b[d] = e
-			});
-			return b
-		}
-		f.ee = pb;
-		f.fe = function(k, m, x, q, z, A, n)
+		f.Wd = function(k, m, x, q, z, A, n)
 		{
 			var a = m;
 			if (k)
@@ -1391,10 +1195,10 @@
 					f = f * B;
 					var u = c.floor(f);
 					if (f != u) f -= u;
-					var h = q.ec || e.Rc,
+					var h = q.ac || e.le,
 						i, C = k[g],
 						o = m[g];
-					if (b.sc(o))
+					if (b.sd(o))
 					{
 						h = q[g] || h;
 						var y = h(f);
@@ -1402,53 +1206,53 @@
 					}
 					else
 					{
-						i = b.H(
+						i = b.bb(
 						{
-							Ib:
+							Gb:
 							{}
 						}, k[g]);
 						var v = q[g] ||
 						{};
-						b.c(o.Ib || o, function(d, a)
+						b.e(o.Gb || o, function(d, a)
 						{
-							h = v[a] || v.ec || h;
+							h = v[a] || v.ac || h;
 							var c = h(f),
 								b = d * c;
-							i.Ib[a] = b;
+							i.Gb[a] = b;
 							i[a] += b
 						})
 					}
 					a[g] = i
 				}
-				var t = b.c(m, function(b, a)
+				var t = b.e(m, function(b, a)
 				{
 					return N[a] != l
 				});
-				t && b.c(N, function(c, b)
+				t && b.e(N, function(c, b)
 				{
 					if (a[b] == l && k[b] !== l) a[b] = k[b]
 				});
 				if (t)
 				{
-					if (a.fb) a.p = a.n = a.fb;
-					a.P = n.P;
-					a.Z = n.Z;
-					a.Yd = d
+					if (a.U) a.p = a.q = a.U;
+					a.M = n.M;
+					a.V = n.V;
+					a.te = d
 				}
 			}
-			if (m.f && n.tb)
+			if (m.c && n.jb)
 			{
-				var p = a.f.Ib,
-					s = (p.i || 0) + (p.B || 0),
-					r = (p.g || 0) + (p.F || 0);
-				a.g = (a.g || 0) + r;
+				var p = a.c.Gb,
+					s = (p.i || 0) + (p.z || 0),
+					r = (p.j || 0) + (p.s || 0);
+				a.j = (a.j || 0) + r;
 				a.i = (a.i || 0) + s;
-				a.f.g -= r;
-				a.f.F -= r;
-				a.f.i -= s;
-				a.f.B -= s
+				a.c.j -= r;
+				a.c.s -= r;
+				a.c.i -= s;
+				a.c.z -= s
 			}
-			if (a.f && b.Zd() && !a.f.i && !a.f.g && !a.f.s && !a.f.z && a.f.F == n.P && a.f.B == n.Z) a.f = j;
+			if (a.c && b.Hd() && !a.c.i && !a.c.j && !a.c.m && !a.c.r && a.c.s == n.M && a.c.z == n.V) a.c = j;
 			return a
 		}
 	};
@@ -1462,26 +1266,26 @@
 		{
 			d.push(
 			{
-				gc: a,
+				dc: a,
 				hc: b
 			})
 		}
 
 		function h(a, c)
 		{
-			b.c(d, function(b, e)
+			b.e(d, function(b, e)
 			{
-				b.gc == a && b.hc === c && d.splice(e, 1)
+				b.dc == a && b.hc === c && d.splice(e, 1)
 			})
 		}
-		a.vb = a.addEventListener = i;
+		a.ob = a.addEventListener = i;
 		a.removeEventListener = h;
-		a.k = function(a)
+		a.f = function(a)
 		{
 			var c = [].slice.call(arguments, 1);
-			b.c(d, function(b)
+			b.e(d, function(b)
 			{
-				b.gc == a && b.hc.apply(g, c)
+				b.dc == a && b.hc.apply(g, c)
 			})
 		}
 	}
@@ -1519,53 +1323,53 @@
 					if (L)
 					{
 						var k = (j - l) / (C || 1);
-						if (i.Cd) k = 1 - k;
-						var n = b.fe(M, L, k, G, F, H, i);
-						if (x) b.c(n, function(b, a)
+						if (i.Zd) k = 1 - k;
+						var n = b.Wd(M, L, k, G, F, H, i);
+						if (x) b.e(n, function(b, a)
 						{
 							x[a] && x[a](J, b)
 						});
-						else b.N(J, n)
+						else b.K(J, n)
 					}
 					a.cc(m - l, j - l);
 					m = j;
-					b.c(w, function(b, c)
+					b.e(w, function(b, c)
 					{
 						var a = o < h ? w[w.length - c - 1] : b;
-						a.v(m - y)
+						a.J(m - y)
 					});
 					var r = h,
 						q = m;
 					h = g;
 					D = d;
-					a.Db(r, q)
+					a.wb(r, q)
 				}
 			}
 		}
 
 		function E(a, b, d)
 		{
-			b && a.Lb(e);
+			b && a.ec(e);
 			if (!d)
 			{
-				f = c.min(f, a.Qb() + y);
-				e = c.max(e, a.Gb() + y)
+				f = c.min(f, a.Xc() + y);
+				e = c.max(e, a.bc() + y)
 			}
 			w.push(a)
 		}
 		var r = g.requestAnimationFrame || g.webkitRequestAnimationFrame || g.mozRequestAnimationFrame || g.msRequestAnimationFrame;
-		if (b.vf() && b.vc() < 7) r = j;
+		if (b.Ae() && b.xc() < 7) r = j;
 		r = r || function(a)
 		{
-			b.xc(a, i.dd)
+			b.wc(a, i.Uc)
 		};
 
 		function I()
 		{
 			if (q)
 			{
-				var d = b.R(),
-					e = c.min(d - A, i.bd),
+				var d = b.L(),
+					e = c.min(d - A, i.hd),
 					a = h + e * o;
 				A = d;
 				if (a * o >= n * o) a = n;
@@ -1586,8 +1390,8 @@
 				g = c.min(g, e);
 				n = g;
 				o = n < h ? -1 : 1;
-				a.ad();
-				A = b.R();
+				a.gd();
+				A = b.L();
 				r(I)
 			}
 		}
@@ -1597,82 +1401,78 @@
 			if (q)
 			{
 				u = q = B = k;
-				a.Zc();
+				a.jd();
 				b && b()
 			}
 		}
-		a.gd = function(a, b, c)
+		a.Kc = function(a, b, c)
 		{
 			s(a ? h + a : e, b, c)
 		};
-		a.Yc = s;
-		a.ab = K;
-		a.zd = function(a)
+		a.lc = s;
+		a.X = K;
+		a.me = function(a)
 		{
 			s(a)
 		};
-		a.U = function()
+		a.R = function()
 		{
 			return h
 		};
-		a.Xc = function()
+		a.Ic = function()
 		{
 			return n
 		};
-		a.Ab = function()
+		a.pb = function()
 		{
 			return m
 		};
-		a.v = t;
-		a.tb = function(a)
+		a.J = t;
+		a.jb = function(a)
 		{
 			t(h + a)
 		};
-		a.Nc = function()
+		a.yc = function()
 		{
 			return q
 		};
-		a.ae = function(a)
+		a.Yd = function(a)
 		{
 			p = a
 		};
-		a.Lb = O;
-		a.wb = function(a, b)
+		a.ec = O;
+		a.kc = function(a, b)
 		{
 			E(a, 0, b)
 		};
-		a.Sb = function(a)
+		a.fc = function(a)
 		{
 			E(a, 1)
 		};
-		a.Kf = function(a)
-		{
-			e += a
-		};
-		a.Qb = function()
+		a.Xc = function()
 		{
 			return f
 		};
-		a.Gb = function()
+		a.bc = function()
 		{
 			return e
 		};
-		a.Db = a.ad = a.Zc = a.cc = b.yc;
-		a.oc = b.R();
-		i = b.H(
+		a.wb = a.gd = a.jd = a.cc = b.bd;
+		a.gc = b.L();
+		i = b.bb(
 		{
-			dd: 16,
-			bd: 50
+			Uc: 16,
+			hd: 50
 		}, i);
-		p = i.Gc;
-		x = i.Df;
+		p = i.Dc;
+		x = i.Pe;
 		f = l = z;
 		e = z + C;
-		H = i.Bf ||
+		H = i.Oe ||
 		{};
-		F = i.Af ||
+		F = i.qd ||
 		{};
-		G = b.ed(i.S)
+		G = b.Pd(i.hb)
 	};
 	new(function() {});
 	var i = function(p, fc)
@@ -1683,24 +1483,24 @@
 		{
 			var a = this;
 			m.call(a, -1e8, 2e8);
-			a.fg = function()
+			a.He = function()
 			{
-				var b = a.Ab(),
+				var b = a.pb(),
 					d = c.floor(b),
 					f = t(d),
 					e = b - c.floor(b);
 				return {
-					bb: f,
-					tf: d,
-					nb: e
+					T: f,
+					Ie: d,
+					db: e
 				}
 			};
-			a.Db = function(b, a)
+			a.wb = function(b, a)
 			{
 				var e = c.floor(a);
 				if (e != a && a > b) e++;
 				Tb(e, d);
-				f.k(i.uf, t(a), t(b), a, b)
+				f.f(i.Je, t(a), t(b), a, b)
 			}
 		}
 
@@ -1709,36 +1509,36 @@
 			var a = this;
 			m.call(a, 0, 0,
 			{
-				Gc: r
+				Dc: r
 			});
-			b.c(C, function(b)
+			b.e(C, function(b)
 			{
-				D & 1 && b.ae(r);
-				a.Sb(b);
-				b.Lb(kb / bc)
+				D & 1 && b.Yd(r);
+				a.fc(b);
+				b.ec(kb / bc)
 			})
 		}
 
 		function zc()
 		{
 			var a = this,
-				b = Ub.J;
+				b = Ub.S;
 			m.call(a, -1, 2,
 			{
-				S: e.Sc,
-				Df:
+				hb: e.ke,
+				Pe:
 				{
-					nb: Zb
+					db: Zb
 				},
-				Gc: r
+				Dc: r
 			}, b,
 			{
-				nb: 1
+				db: 1
 			},
 			{
-				nb: -2
+				db: -2
 			});
-			a.jc = b
+			a.Nb = b
 		}
 
 		function mc(o, n)
@@ -1747,23 +1547,23 @@
 				e, g, h, l, c;
 			m.call(b, -1e8, 2e8,
 			{
-				bd: 100
+				hd: 100
 			});
-			b.ad = function()
+			b.gd = function()
 			{
 				M = d;
 				R = j;
-				f.k(i.xf, t(w.U()), w.U())
+				f.f(i.Ke, t(w.R()), w.R())
 			};
-			b.Zc = function()
+			b.jd = function()
 			{
 				M = k;
 				l = k;
-				var a = w.fg();
-				f.k(i.zf, t(w.U()), w.U());
-				!a.nb && Dc(a.tf, s)
+				var a = w.He();
+				f.f(i.Le, t(w.R()), w.R());
+				!a.db && Dc(a.Ie, s)
 			};
-			b.Db = function(i, f)
+			b.wb = function(i, f)
 			{
 				var b;
 				if (l) b = c;
@@ -1773,46 +1573,46 @@
 					if (h)
 					{
 						var d = f / h;
-						b = a.Jc(d) * (g - e) + e
+						b = a.Vc(d) * (g - e) + e
 					}
 				}
-				w.v(b)
+				w.J(b)
 			};
-			b.Jb = function(a, d, c, f)
+			b.tb = function(a, d, c, f)
 			{
 				e = a;
 				g = d;
 				h = c;
-				w.v(a);
-				b.v(0);
-				b.Yc(c, f)
+				w.J(a);
+				b.J(0);
+				b.lc(c, f)
 			};
-			b.Bd = function(a)
+			b.Me = function(a)
 			{
 				l = d;
 				c = a;
-				b.gd(a, j, d)
+				b.Kc(a, j, d)
 			};
-			b.Vf = function(a)
+			b.Ne = function(a)
 			{
 				c = a
 			};
 			w = new Bc;
-			w.wb(o);
-			w.wb(n)
+			w.kc(o);
+			w.kc(n)
 		}
 
 		function oc()
 		{
 			var c = this,
 				a = Xb();
-			b.q(a, 0);
-			b.X(a, "pointerEvents", "none");
-			c.J = a;
-			c.Kb = function()
+			b.u(a, 0);
+			b.Q(a, "pointerEvents", "none");
+			c.S = a;
+			c.yb = function()
 			{
-				b.M(a);
-				b.kc(a)
+				b.G(a);
+				b.Jb(a)
 			}
 		}
 
@@ -1826,16 +1626,16 @@
 
 			function E(a)
 			{
-				q && q.ld();
+				q && q.Pc();
 				T(o, a, 0);
 				F = d;
-				q = new I.L(o, I, b.Kd(b.j(o, "idle")) || lc);
-				q.v(0)
+				q = new I.F(o, I, b.Cd(b.g(o, "idle")) || lc);
+				q.J(0)
 			}
 
 			function Z()
 			{
-				q.oc < I.oc && E()
+				q.gc < I.gc && E()
 			}
 
 			function O(p, r, o)
@@ -1849,27 +1649,27 @@
 							c = o.height,
 							n = h,
 							m = c;
-						if (h && c && a.yb)
+						if (h && c && a.eb)
 						{
-							if (a.yb & 3 && (!(a.yb & 4) || h > K || c > J))
+							if (a.eb & 3 && (!(a.eb & 4) || h > K || c > J))
 							{
 								var j = k,
 									q = K / J * c / h;
-								if (a.yb & 1) j = q > 1;
-								else if (a.yb & 2) j = q < 1;
+								if (a.eb & 1) j = q > 1;
+								else if (a.eb & 2) j = q < 1;
 								n = j ? h * J / c : K;
 								m = j ? J : c * K / h
 							}
-							b.l(l, n);
-							b.m(l, m);
-							b.E(l, (J - m) / 2);
-							b.D(l, (K - n) / 2)
+							b.k(l, n);
+							b.l(l, m);
+							b.C(l, (J - m) / 2);
+							b.B(l, (K - n) / 2)
 						}
-						b.C(l, "absolute");
-						f.k(i.Dd, g)
+						b.v(l, "absolute");
+						f.f(i.Qe, g)
 					}
 				}
-				b.M(r);
+				b.G(r);
 				p && p(e)
 			}
 
@@ -1879,11 +1679,11 @@
 					if (!Cc)
 					{
 						var a = t(b);
-						A.pg(a, g, c, e, d);
-						c.Ed();
-						U.Lb(a - U.Qb() - 1);
-						U.v(a);
-						z.Jb(b, b, 0)
+						A.we(a, g, c, e, d);
+						c.Re();
+						U.ec(a - U.Xc() - 1);
+						U.J(a);
+						z.tb(b, b, 0)
 					}
 			}
 
@@ -1895,12 +1695,12 @@
 					{
 						var a = j;
 						if (A)
-							if (A.bb == g) a = A.sg();
-							else A.Kb();
+							if (A.T == g) a = A.Fe();
+							else A.yb();
 						Z();
 						h = new vc(o, g, a, q);
 						h.Qc(p)
-					}!h.Nc() && h.rc()
+					}!h.yc() && h.Kb()
 				}
 			}
 
@@ -1908,19 +1708,19 @@
 			{
 				if (d == g)
 				{
-					if (d != f) C[f] && C[f].wd();
-					else !l && h && h.he();
-					p && p.sd();
-					var m = R = b.R();
-					e.hb(b.G(j, bb, m))
+					if (d != f) C[f] && C[f].Tc();
+					else !l && h && h.Se();
+					p && p.zc();
+					var m = R = b.L();
+					e.nb(b.D(j, bb, m))
 				}
 				else
 				{
 					var k = c.min(g, d),
 						i = c.max(g, d),
 						o = c.min(i - k, k + r - i),
-						n = u + a.Hd - 1;
-					(!S || o <= n) && e.hb()
+						n = u + a.qe - 1;
+					(!S || o <= n) && e.nb()
 				}
 			}
 
@@ -1928,21 +1728,21 @@
 			{
 				if (s == g && h)
 				{
-					h.ab();
-					p && p.ce();
-					p && p.be();
-					h.hd()
+					h.X();
+					p && p.Be();
+					p && p.oe();
+					h.id()
 				}
 			}
 
 			function eb()
 			{
-				s == g && h && h.ab()
+				s == g && h && h.X()
 			}
 
 			function ab(a)
 			{
-				!P && f.k(i.Sd, g, a)
+				!P && f.f(i.pe, g, a)
 			}
 
 			function Q()
@@ -1950,104 +1750,104 @@
 				p = w.pInstance;
 				h && h.Qc(p)
 			}
-			e.hb = function(c, a)
+			e.nb = function(c, a)
 			{
 				a = a || v;
 				if (y.length && !H)
 				{
-					b.O(a);
+					b.I(a);
 					if (!W)
 					{
 						W = d;
-						f.k(i.Rd, g);
-						b.c(y, function(a)
+						f.f(i.Kd, g);
+						b.e(y, function(a)
 						{
-							if (!b.A(a, "src"))
+							if (!b.n(a, "src"))
 							{
-								a.src = b.j(a, "src2");
-								b.V(a, a["display-origin"])
+								a.src = b.g(a, "src2");
+								b.H(a, a["display-origin"])
 							}
 						})
 					}
-					b.Ld(y, l, b.G(j, O, c, a))
+					b.zd(y, l, b.D(j, O, c, a))
 				}
 				else O(c, a)
 			};
-			e.Qd = function()
+			e.Ld = function()
 			{
 				var i = g;
-				if (a.td < 0) i -= r;
-				var d = i + a.td * tc;
+				if (a.rc < 0) i -= r;
+				var d = i + a.rc * tc;
 				if (D & 2) d = t(d);
 				if (!(D & 1) && !ib) d = c.max(0, c.min(d, r - u));
 				if (d != g)
 				{
 					if (A)
 					{
-						var f = A.kg(r);
+						var f = A.ve(r);
 						if (f)
 						{
-							var k = R = b.R(),
+							var k = R = b.L(),
 								h = C[t(d)];
-							return h.hb(b.G(j, Y, d, h, f, k), v)
+							return h.nb(b.D(j, Y, d, h, f, k), v)
 						}
 					}
 					cb(d)
 				}
-				else if (a.lb)
+				else if (a.kb)
 				{
-					e.wd();
+					e.Tc();
 					G(g, g)
 				}
 			};
-			e.Tb = function()
+			e.Xb = function()
 			{
 				G(g, g, d)
 			};
-			e.wd = function()
+			e.Tc = function()
 			{
-				p && p.ce();
-				p && p.be();
-				e.jd();
-				h && h.de();
+				p && p.Be();
+				p && p.oe();
+				e.cd();
+				h && h.Md();
 				h = j;
 				E()
 			};
-			e.Ed = function()
+			e.Re = function()
 			{
-				b.M(o)
+				b.G(o)
 			};
-			e.jd = function()
+			e.cd = function()
 			{
-				b.O(o)
+				b.I(o)
 			};
-			e.Fd = function()
+			e.Nd = function()
 			{
-				p && p.sd()
+				p && p.zc()
 			};
 
 			function T(a, c, e)
 			{
-				if (b.A(a, "jssor-slider")) return;
+				if (b.n(a, "jssor-slider")) return;
 				if (!F)
 				{
 					if (a.tagName == "IMG")
 					{
 						y.push(a);
-						if (!b.A(a, "src"))
+						if (!b.n(a, "src"))
 						{
 							S = d;
-							a["display-origin"] = b.V(a);
-							b.M(a)
+							a["display-origin"] = b.H(a);
+							b.G(a)
 						}
 					}
-					b.uc() && b.q(a, (b.q(a) || 0) + 1)
+					b.Sc() && b.u(a, (b.u(a) || 0) + 1)
 				}
-				var f = b.xb(a);
-				b.c(f, function(f)
+				var f = b.Hb(a);
+				b.e(f, function(f)
 				{
 					var h = f.tagName,
-						i = b.j(f, "u");
+						i = b.g(f, "u");
 					if (i == "player" && !w)
 					{
 						w = f;
@@ -2058,15 +1858,15 @@
 					{
 						if (c)
 						{
-							b.Fc(f, b.j(f, "to"));
-							b.Ff(f, b.j(f, "bf"));
-							b.j(f, "3d") && b.je(f, "preserve-3d")
+							b.Ac(f, b.g(f, "to"));
+							b.Id(f, b.g(f, "bf"));
+							b.g(f, "3d") && b.se(f, "preserve-3d")
 						}
-						else if (!b.Pc())
+						else if (!b.ed())
 						{
-							var g = b.gb(f, k, d);
-							b.Mb(g, f, a);
-							b.Fb(f, a);
+							var g = b.sb(f, k, d);
+							b.Eb(g, f, a);
+							b.vb(f, a);
 							f = g;
 							c = d
 						}
@@ -2075,24 +1875,24 @@
 					{
 						if (h == "A")
 						{
-							if (b.j(f, "u") == "image") l = b.Nf(f, "IMG");
-							else l = b.u(f, "image", d);
+							if (b.g(f, "u") == "image") l = b.td(f, "IMG");
+							else l = b.o(f, "image", d);
 							if (l)
 							{
 								x = f;
-								b.V(x, "block");
-								b.N(x, V);
-								B = b.gb(x, d);
-								b.C(x, "relative");
-								b.mc(B, 0);
-								b.X(B, "backgroundColor", "#000")
+								b.H(x, "block");
+								b.K(x, V);
+								B = b.sb(x, d);
+								b.v(x, "relative");
+								b.Lb(B, 0);
+								b.Q(B, "backgroundColor", "#000")
 							}
 						}
-						else if (h == "IMG" && b.j(f, "u") == "image") l = f;
+						else if (h == "IMG" && b.g(f, "u") == "image") l = f;
 						if (l)
 						{
 							l.border = 0;
-							b.N(l, V)
+							b.K(l, V)
 						}
 					}
 					T(f, c, e + 1)
@@ -2103,28 +1903,28 @@
 				var a = u - b;
 				Zb(M, a)
 			};
-			e.bb = g;
+			e.T = g;
 			n.call(e);
-			b.Sf(o, b.j(o, "p"));
-			b.Gf(o, b.j(o, "po"));
-			var L = b.u(o, "thumb", d);
+			b.re(o, b.g(o, "p"));
+			b.Ee(o, b.g(o, "po"));
+			var L = b.o(o, "thumb", d);
 			if (L)
 			{
-				b.gb(L);
-				b.M(L)
+				b.sb(L);
+				b.G(L)
 			}
-			b.O(o);
-			v = b.gb(gb);
-			b.q(v, 1e3);
+			b.I(o);
+			v = b.sb(gb);
+			b.u(v, 1e3);
 			b.a(o, "click", ab);
 			E(d);
-			e.qg = l;
-			e.Cc = B;
-			e.jc = M = o;
-			b.K(M, v);
-			f.vb(203, G);
-			f.vb(28, eb);
-			f.vb(24, db)
+			e.ye = l;
+			e.Wc = B;
+			e.Nb = M = o;
+			b.E(M, v);
+			f.ob(203, G);
+			f.ob(28, eb);
+			f.ob(24, db)
 		}
 
 		function vc(y, g, p, q)
@@ -2137,25 +1937,25 @@
 
 			function v()
 			{
-				b.kc(L);
-				cc && l && o.Cc && b.K(L, o.Cc);
-				b.O(L, !l && o.qg)
+				b.Jb(L);
+				cc && l && o.Wc && b.E(L, o.Wc);
+				b.I(L, !l && o.ye)
 			}
 
 			function w()
 			{
-				a.rc()
+				a.Kb()
 			}
 
 			function x(b)
 			{
 				r = b;
-				a.ab();
-				a.rc()
+				a.X();
+				a.Kb()
 			}
-			a.rc = function()
+			a.Kb = function()
 			{
-				var b = a.Ab();
+				var b = a.pb();
 				if (!B && !M && !r && s == g)
 				{
 					if (!b)
@@ -2163,36 +1963,36 @@
 						if (h && !l)
 						{
 							l = d;
-							a.hd(d);
-							f.k(i.Ad, g, n, u, h, c)
+							a.id(d);
+							f.f(i.Od, g, n, u, h, c)
 						}
 						v()
 					}
-					var k, p = i.Bc;
+					var k, p = i.Zc;
 					if (b != c)
 						if (b == e) k = c;
 						else if (b == j) k = e;
 					else if (!b) k = j;
-					else k = a.Xc();
-					f.k(p, g, b, n, j, e, c);
+					else k = a.Ic();
+					f.f(p, g, b, n, j, e, c);
 					var m = N && (!E || F);
-					if (b == c)(e != c && !(E & 12) || m) && o.Qd();
-					else(m || b != e) && a.Yc(k, w)
+					if (b == c)(e != c && !(E & 12) || m) && o.Ld();
+					else(m || b != e) && a.lc(k, w)
 				}
 			};
-			a.he = function()
+			a.Se = function()
 			{
-				e == c && e == a.Ab() && a.v(j)
+				e == c && e == a.pb() && a.J(j)
 			};
-			a.de = function()
+			a.Md = function()
 			{
-				A && A.bb == g && A.Kb();
-				var b = a.Ab();
-				b < c && f.k(i.Bc, g, -b - 1, n, j, e, c)
+				A && A.T == g && A.yb();
+				var b = a.pb();
+				b < c && f.f(i.Zc, g, -b - 1, n, j, e, c)
 			};
-			a.hd = function(a)
+			a.id = function(a)
 			{
-				p && b.Pb(lb, a && p.ic.xg ? "" : "hidden")
+				p && b.Cb(lb, a && p.oc.bf ? "" : "hidden")
 			};
 			a.cc = function(b, a)
 			{
@@ -2200,32 +2000,32 @@
 				{
 					l = k;
 					v();
-					o.jd();
-					A.Kb();
-					f.k(i.yd, g, n, u, h, c)
+					o.cd();
+					A.yb();
+					f.f(i.Qd, g, n, u, h, c)
 				}
-				f.k(i.ke, g, a, n, j, e, c)
+				f.f(i.Rd, g, a, n, j, e, c)
 			};
 			a.Qc = function(a)
 			{
 				if (a && !t)
 				{
 					t = a;
-					a.vb($JssorPlayer$.wf, x)
+					a.ob($JssorPlayer$.vd, x)
 				}
 			};
-			p && a.Sb(p);
-			h = a.Gb();
-			a.Sb(q);
-			j = h + q.tc;
-			e = h + q.wc;
-			c = a.Gb()
+			p && a.fc(p);
+			h = a.bc();
+			a.fc(q);
+			j = h + q.kd;
+			e = h + q.fd;
+			c = a.bc()
 		}
 
 		function Kb(a, c, d)
 		{
-			b.D(a, c);
-			b.E(a, d)
+			b.B(a, c);
+			b.C(a, d)
 		}
 
 		function Zb(c, b)
@@ -2239,8 +2039,8 @@
 		function Pb()
 		{
 			qb = M;
-			Ib = z.Xc();
-			G = w.U()
+			Ib = z.Ic();
+			G = w.R()
 		}
 
 		function gc()
@@ -2248,18 +2048,18 @@
 			Pb();
 			if (B || !F && E & 12)
 			{
-				z.ab();
-				f.k(i.Qf)
+				z.X();
+				f.f(i.Sd)
 			}
 		}
 
 		function ec(f)
 		{
-			if (!B && (F || !(E & 12)) && !z.Nc())
+			if (!B && (F || !(E & 12)) && !z.yc())
 			{
-				var d = w.U(),
+				var d = w.R(),
 					b = c.ceil(G);
-				if (f && c.abs(H) >= a.Ac)
+				if (f && c.abs(H) >= a.qc)
 				{
 					b = c.ceil(d);
 					b += jb
@@ -2267,19 +2067,19 @@
 				if (!(D & 1)) b = c.min(r - u, c.max(b, 0));
 				var e = c.abs(b - d);
 				e = 1 - c.pow(1 - e, 5);
-				if (!P && qb) z.zd(Ib);
+				if (!P && qb) z.me(Ib);
 				else if (d == b)
 				{
-					tb.Fd();
-					tb.Tb()
+					tb.Nd();
+					tb.Xb()
 				}
-				else z.Jb(d, b, e * Vb)
+				else z.tb(d, b, e * Vb)
 			}
 		}
 
 		function Hb(a)
 		{
-			!b.j(b.Zb(a), "nodrag") && b.Eb(a)
+			!b.g(b.Sb(a), "nodrag") && b.Ib(a)
 		}
 
 		function rc(a)
@@ -2289,15 +2089,15 @@
 
 		function Yb(a, c)
 		{
-			a = b.Ec(a);
-			var l = b.Zb(a);
-			if (!O && !b.j(l, "nodrag") && sc() && (!c || a.touches.length == 1))
+			a = b.sc(a);
+			var l = b.Sb(a);
+			if (!O && !b.g(l, "nodrag") && sc() && (!c || a.touches.length == 1))
 			{
 				B = d;
 				yb = k;
 				R = j;
 				b.a(h, c ? "touchmove" : "mousemove", Bb);
-				b.R();
+				b.L();
 				P = 0;
 				gc();
 				if (!qb) x = 0;
@@ -2309,14 +2109,14 @@
 				}
 				else
 				{
-					var e = b.Hc(a);
+					var e = b.uc(a);
 					ub = e.x;
 					vb = e.y
 				}
 				H = 0;
 				hb = 0;
 				jb = 0;
-				f.k(i.Of, t(G), G, a)
+				f.f(i.Td, t(G), G, a)
 			}
 		}
 
@@ -2324,7 +2124,7 @@
 		{
 			if (B)
 			{
-				e = b.Ec(e);
+				e = b.sc(e);
 				var f;
 				if (e.type != "mousemove")
 				{
@@ -2334,7 +2134,7 @@
 						y: l.clientY
 					}
 				}
-				else f = b.Hc(e);
+				else f = b.uc(e);
 				if (f)
 				{
 					var j = f.x - ub,
@@ -2379,9 +2179,9 @@
 						sb = G - H / i / (Y || 1);
 						if (H && x && !yb)
 						{
-							b.Eb(e);
-							if (!M) z.Bd(sb);
-							else z.Vf(sb)
+							b.Ib(e);
+							if (!M) z.Me(sb);
+							else z.Ne(sb)
 						}
 					}
 				}
@@ -2394,13 +2194,13 @@
 			if (B)
 			{
 				B = k;
-				b.R();
-				b.I(h, "mousemove", Bb);
-				b.I(h, "touchmove", Bb);
+				b.L();
+				b.A(h, "mousemove", Bb);
+				b.A(h, "touchmove", Bb);
 				P = H;
-				z.ab();
-				var a = w.U();
-				f.k(i.Lf, t(a), a, t(G), G);
+				z.X();
+				var a = w.R();
+				f.f(i.Ud, t(a), a, t(G), G);
 				E & 12 && Pb();
 				ec(d)
 			}
@@ -2410,11 +2210,11 @@
 		{
 			if (P)
 			{
-				b.Jf(c);
-				var a = b.Zb(c);
+				b.De(c);
+				var a = b.Sb(c);
 				while (a && v !== a)
 				{
-					a.tagName == "A" && b.Eb(c);
+					a.tagName == "A" && b.Ib(c);
 					try
 					{
 						a = a.parentNode
@@ -2440,24 +2240,24 @@
 		{
 			x = 0;
 			Jb(a);
-			f.k(i.ie, t(a), b)
+			f.f(i.Vd, t(a), b)
 		}
 
 		function Tb(a, c)
 		{
 			wb = a;
-			b.c(S, function(b)
+			b.e(S, function(b)
 			{
-				b.Rb(t(a), a, c)
+				b.Zb(t(a), a, c)
 			})
 		}
 
 		function sc()
 		{
-			var b = i.Ic || 0,
+			var b = i.Jc || 0,
 				a = X;
 			if (ob) a & 1 && (a &= 1);
-			i.Ic |= a;
+			i.Jc |= a;
 			return O = a & ~b
 		}
 
@@ -2465,16 +2265,16 @@
 		{
 			if (O)
 			{
-				i.Ic &= ~X;
+				i.Jc &= ~X;
 				O = 0
 			}
 		}
 
 		function Xb()
 		{
-			var a = b.zb();
-			b.N(a, V);
-			b.C(a, "absolute");
+			var a = b.mb();
+			b.K(a, V);
+			b.v(a, "absolute");
 			return a
 		}
 
@@ -2496,14 +2296,14 @@
 				b = t(b + wb);
 				d = k
 			}
-			cb(b, a.Bb, d)
+			cb(b, a.Db, d)
 		}
 
 		function xb()
 		{
-			b.c(S, function(a)
+			b.e(S, function(a)
 			{
-				a.nc(a.Cb.yg <= F)
+				a.Yb(a.Fb.af <= F)
 			})
 		}
 
@@ -2516,7 +2316,7 @@
 				if (!B)
 				{
 					E & 12 && ec();
-					E & 3 && C[s].Tb()
+					E & 3 && C[s].Xb()
 				}
 			}
 		}
@@ -2534,19 +2334,19 @@
 		function ic()
 		{
 			V = {
-				qb: K,
-				pb: J,
+				ub: K,
+				xb: J,
 				i: 0,
-				g: 0
+				j: 0
 			};
-			b.c(T, function(a)
+			b.e(T, function(a)
 			{
-				b.N(a, V);
-				b.C(a, "absolute");
-				b.Pb(a, "hidden");
-				b.M(a)
+				b.K(a, V);
+				b.v(a, "absolute");
+				b.Cb(a, "hidden");
+				b.G(a)
 			});
-			b.N(gb, V)
+			b.K(gb, V)
 		}
 
 		function ab(b, a)
@@ -2556,13 +2356,13 @@
 
 		function cb(g, f, j)
 		{
-			if (Rb && (!B && (F || !(E & 12)) || a.Lc))
+			if (Rb && (!B && (F || !(E & 12)) || a.Cc))
 			{
 				M = d;
 				B = k;
-				z.ab();
+				z.X();
 				if (f == l) f = Vb;
-				var e = Cb.Ab(),
+				var e = Cb.pb(),
 					b = g;
 				if (j)
 				{
@@ -2576,144 +2376,144 @@
 				b = e + i;
 				var h = e == b ? 0 : f * c.abs(i);
 				h = c.min(h, f * u * 1.5);
-				z.Jb(e, b, h || 1)
+				z.tb(e, b, h || 1)
 			}
 		}
-		f.gd = function()
+		f.Kc = function()
 		{
 			if (!N)
 			{
 				N = d;
-				C[s] && C[s].Tb()
+				C[s] && C[s].Xb()
 			}
 		};
 
 		function W()
 		{
-			return b.l(y || p)
+			return b.k(y || p)
 		}
 
 		function nb()
 		{
-			return b.m(y || p)
+			return b.l(y || p)
 		}
-		f.P = W;
-		f.Z = nb;
+		f.M = W;
+		f.V = nb;
 
 		function Eb(c, d)
 		{
-			if (c == l) return b.l(p);
+			if (c == l) return b.k(p);
 			if (!y)
 			{
-				var a = b.zb(h);
-				b.Oc(a, b.Oc(p));
-				b.kb(a, b.kb(p));
-				b.V(a, "block");
-				b.C(a, "relative");
-				b.E(a, 0);
-				b.D(a, 0);
-				b.Pb(a, "visible");
-				y = b.zb(h);
-				b.C(y, "absolute");
-				b.E(y, 0);
-				b.D(y, 0);
+				var a = b.mb(h);
+				b.Mc(a, b.Mc(p));
+				b.cb(a, b.cb(p));
+				b.H(a, "block");
+				b.v(a, "relative");
+				b.C(a, 0);
+				b.B(a, 0);
+				b.Cb(a, "visible");
+				y = b.mb(h);
+				b.v(y, "absolute");
+				b.C(y, 0);
+				b.B(y, 0);
+				b.k(y, b.k(p));
 				b.l(y, b.l(p));
-				b.m(y, b.m(p));
-				b.Fc(y, "0 0");
-				b.K(y, a);
-				var g = b.xb(p);
-				b.K(p, y);
-				b.X(p, "backgroundImage", "");
-				b.c(g, function(c)
+				b.Ac(y, "0 0");
+				b.E(y, a);
+				var g = b.Hb(p);
+				b.E(p, y);
+				b.Q(p, "backgroundImage", "");
+				b.e(g, function(c)
 				{
-					b.K(b.j(c, "noscale") ? p : a, c);
-					b.j(c, "autocenter") && Lb.push(c)
+					b.E(b.g(c, "noscale") ? p : a, c);
+					b.g(c, "autocenter") && Lb.push(c)
 				})
 			}
-			Y = c / (d ? b.m : b.l)(y);
-			b.Hf(y, Y);
+			Y = c / (d ? b.l : b.k)(y);
+			b.Ue(y, Y);
 			var f = d ? Y * W() : c,
 				e = d ? c : Y * nb();
-			b.l(p, f);
-			b.m(p, e);
-			b.c(Lb, function(a)
+			b.k(p, f);
+			b.l(p, e);
+			b.e(Lb, function(a)
 			{
-				var c = b.Xb(b.j(a, "autocenter"));
-				b.Jd(a, c)
+				var c = b.Ed(b.g(a, "autocenter"));
+				b.Dd(a, c)
 			})
 		}
-		f.rg = Eb;
+		f.ae = Eb;
 		n.call(f);
-		f.J = p = b.jb(p);
-		var a = b.H(
+		f.S = p = b.ib(p);
+		var a = b.bb(
 		{
-			yb: 0,
-			Hd: 1,
-			Wb: 1,
-			Vb: 0,
+			eb: 0,
+			qe: 1,
+			ic: 1,
+			Wb: 0,
 			Ub: k,
+			kb: 1,
+			qb: d,
+			Cc: d,
+			rc: 1,
+			Oc: 3e3,
+			Yc: 1,
+			Db: 500,
+			Vc: e.je,
+			qc: 20,
+			ad: 0,
 			lb: 1,
-			rb: d,
-			Lc: d,
-			td: 1,
-			md: 3e3,
-			nd: 1,
-			Bb: 500,
-			Jc: e.Wc,
-			Ac: 20,
-			od: 0,
-			ob: 1,
-			qd: 0,
-			og: 1,
-			ac: 1,
-			pd: 1
+			Nc: 0,
+			be: 1,
+			Mb: 1,
+			Lc: 1
 		}, fc);
-		a.rb = a.rb && b.yf();
-		if (a.ng != l) a.md = a.ng;
-		if (a.mg != l) a.qd = a.mg;
-		var fb = a.ac & 3,
-			tc = (a.ac & 4) / -4 || 1,
-			mb = a.zg,
-			I = b.H(
+		a.qb = a.qb && b.xe();
+		if (a.ce != l) a.Oc = a.ce;
+		if (a.de != l) a.Nc = a.de;
+		var fb = a.Mb & 3,
+			tc = (a.Mb & 4) / -4 || 1,
+			mb = a.Ve,
+			I = b.bb(
 			{
-				L: q,
-				rb: a.rb
-			}, a.lg);
-		I.ib = I.ib || I.ug;
-		var Fb = a.jg,
-			Z = a.ig,
-			eb = a.vg,
-			Q = !a.og,
-			y, v = b.u(p, "slides", Q),
-			gb = b.u(p, "loading", Q) || b.zb(h),
-			Nb = b.u(p, "navigator", Q),
-			dc = b.u(p, "arrowleft", Q),
-			ac = b.u(p, "arrowright", Q),
-			Mb = b.u(p, "thumbnavigator", Q),
-			pc = b.l(v),
-			nc = b.m(v),
+				F: q,
+				qb: a.qb
+			}, a.Ye);
+		I.Rb = I.Rb || I.Xe;
+		var Fb = a.fe,
+			Z = a.ge,
+			eb = a.Ze,
+			Q = !a.be,
+			y, v = b.o(p, "slides", Q),
+			gb = b.o(p, "loading", Q) || b.mb(h),
+			Nb = b.o(p, "navigator", Q),
+			dc = b.o(p, "arrowleft", Q),
+			ac = b.o(p, "arrowright", Q),
+			Mb = b.o(p, "thumbnavigator", Q),
+			pc = b.k(v),
+			nc = b.l(v),
 			V, T = [],
-			uc = b.xb(v);
-		b.c(uc, function(a)
+			uc = b.Hb(v);
+		b.e(uc, function(a)
 		{
-			if (a.tagName == "DIV" && !b.j(a, "u")) T.push(a);
-			else b.uc() && b.q(a, (b.q(a) || 0) + 1)
+			if (a.tagName == "DIV" && !b.g(a, "u")) T.push(a);
+			else b.Sc() && b.u(a, (b.u(a) || 0) + 1)
 		});
 		var s = -1,
 			wb, tb, r = T.length,
-			K = a.hg || pc,
-			J = a.gg || nc,
-			Wb = a.od,
+			K = a.he || pc,
+			J = a.ie || nc,
+			Wb = a.ad,
 			zb = K + Wb,
 			Ab = J + Wb,
 			bc = fb & 1 ? zb : Ab,
-			u = c.min(a.ob, r),
+			u = c.min(a.lb, r),
 			lb, x, O, yb, S = [],
-			Qb, Sb, Ob, cc, Cc, N, E = a.nd,
-			lc = a.md,
-			Vb = a.Bb,
+			Qb, Sb, Ob, cc, Cc, N, E = a.Yc,
+			lc = a.Oc,
+			Vb = a.Db,
 			rb, ib, kb, Rb = u < r,
-			D = Rb ? a.lb : 0,
+			D = Rb ? a.kb : 0,
 			X, P, F = 1,
 			M, B, R, ub = 0,
 			vb = 0,
@@ -2721,56 +2521,56 @@
 			Y, Lb = [];
 		if (r)
 		{
-			if (a.rb) Kb = function(a, c, d)
+			if (a.qb) Kb = function(a, c, d)
 			{
-				b.Nb(a,
+				b.zb(a,
 				{
 					Y: c,
-					eb: d
+					W: d
 				})
 			};
 			N = a.Ub;
-			f.Cb = fc;
+			f.Fb = fc;
 			ic();
-			b.A(p, "jssor-slider", d);
-			b.q(v, b.q(v) || 0);
-			b.C(v, "absolute");
-			lb = b.gb(v, d);
-			b.Mb(lb, v);
+			b.n(p, "jssor-slider", d);
+			b.u(v, b.u(v) || 0);
+			b.v(v, "absolute");
+			lb = b.sb(v, d);
+			b.Eb(lb, v);
 			if (mb)
 			{
-				cc = mb.wg;
-				rb = mb.L;
-				ib = u == 1 && r > 1 && rb && (!b.Pc() || b.vc() >= 8)
+				cc = mb.We;
+				rb = mb.F;
+				ib = u == 1 && r > 1 && rb && (!b.ed() || b.xc() >= 8)
 			}
-			kb = ib || u >= r || !(D & 1) ? 0 : a.qd;
-			X = (u > 1 || kb ? fb : -1) & a.pd;
+			kb = ib || u >= r || !(D & 1) ? 0 : a.Nc;
+			X = (u > 1 || kb ? fb : -1) & a.Lc;
 			var Gb = v,
 				C = [],
-				A, L, Db = b.Uf(),
-				ob = Db.Ef,
+				A, L, Db = b.Te(),
+				ob = Db.Ge,
 				G, qb, Ib, sb;
-			Db.kd && b.X(Gb, Db.kd, ([j, "pan-y", "pan-x", "none"])[X] || "");
+			Db.dd && b.Q(Gb, Db.dd, ([j, "pan-y", "pan-x", "none"])[X] || "");
 			U = new zc;
 			if (ib) A = new rb(Ub, K, J, mb, ob);
-			b.K(lb, U.jc);
-			b.Pb(v, "hidden");
+			b.E(lb, U.Nb);
+			b.Cb(v, "hidden");
 			L = Xb();
-			b.X(L, "backgroundColor", "#000");
-			b.mc(L, 0);
-			b.Mb(L, Gb.firstChild, Gb);
+			b.Q(L, "backgroundColor", "#000");
+			b.Lb(L, 0);
+			b.Eb(L, Gb.firstChild, Gb);
 			for (var db = 0; db < T.length; db++)
 			{
 				var wc = T[db],
 					yc = new xc(wc, db);
 				C.push(yc)
 			}
-			b.M(gb);
+			b.G(gb);
 			Cb = new Ac;
 			z = new mc(Cb, U);
 			b.a(v, "click", jc, d);
-			b.a(p, "mouseout", b.dc(hc, p));
-			b.a(p, "mouseover", b.dc(Ec, p));
+			b.a(p, "mouseout", b.Pb(hc, p));
+			b.a(p, "mouseover", b.Pb(Ec, p));
 			if (X)
 			{
 				b.a(v, "mousedown", Yb);
@@ -2785,77 +2585,77 @@
 			E &= ob ? 10 : 5;
 			if (Nb && Fb)
 			{
-				Qb = new Fb.L(Nb, Fb, W(), nb());
+				Qb = new Fb.F(Nb, Fb, W(), nb());
 				S.push(Qb)
 			}
 			if (Z && dc && ac)
 			{
-				Z.lb = D;
-				Z.ob = u;
-				Sb = new Z.L(dc, ac, Z, W(), nb());
+				Z.kb = D;
+				Z.lb = u;
+				Sb = new Z.F(dc, ac, Z, W(), nb());
 				S.push(Sb)
 			}
 			if (Mb && eb)
 			{
-				eb.Vb = a.Vb;
-				Ob = new eb.L(Mb, eb);
+				eb.Wb = a.Wb;
+				Ob = new eb.F(Mb, eb);
 				S.push(Ob)
 			}
-			b.c(S, function(a)
+			b.e(S, function(a)
 			{
-				a.qc(r, C, gb);
-				a.vb(o.pc, kc)
+				a.Vb(r, C, gb);
+				a.ob(o.Tb, kc)
 			});
-			b.X(p, "visibility", "visible");
+			b.Q(p, "visibility", "visible");
 			Eb(W());
 			xb();
-			a.Wb && b.a(h, "keydown", function(b)
+			a.ic && b.a(h, "keydown", function(b)
 			{
-				if (b.keyCode == 37) ab(-a.Wb);
-				else b.keyCode == 39 && ab(a.Wb)
+				if (b.keyCode == 37) ab(-a.ic);
+				else b.keyCode == 39 && ab(a.ic)
 			});
-			var pb = a.Vb;
+			var pb = a.Wb;
 			if (!(D & 1)) pb = c.max(0, c.min(pb, r - u));
-			z.Jb(pb, pb, 0)
+			z.tb(pb, pb, 0)
 		}
 	};
-	i.Sd = 21;
-	i.Of = 22;
-	i.Lf = 23;
-	i.xf = 24;
-	i.zf = 25;
-	i.Rd = 26;
-	i.Dd = 27;
-	i.Qf = 28;
-	i.uf = 202;
-	i.ie = 203;
-	i.Ad = 206;
-	i.yd = 207;
-	i.ke = 208;
-	i.Bc = 209;
+	i.pe = 21;
+	i.Td = 22;
+	i.Ud = 23;
+	i.Ke = 24;
+	i.Le = 25;
+	i.Kd = 26;
+	i.Qe = 27;
+	i.Sd = 28;
+	i.Je = 202;
+	i.Vd = 203;
+	i.Od = 206;
+	i.Qd = 207;
+	i.Rd = 208;
+	i.Zc = 209;
 	var o = {
-			pc: 1
+			Tb: 1
 		},
 		r = function(e, C)
 		{
 			var f = this;
 			n.call(f);
-			e = b.jb(e);
+			e = b.ib(e);
 			var s, A, z, r, l = 0,
 				a, m, i, w, x, h, g, q, p, B = [],
 				y = [];
 
 			function v(a)
 			{
-				a != -1 && y[a].Nd(a == l)
+				a != -1 && y[a].wd(a == l)
 			}
 
 			function t(a)
 			{
-				f.k(o.pc, a * m)
+				f.f(o.Tb, a * m)
 			}
-			f.J = e;
-			f.Rb = function(a)
+			f.S = e;
+			f.Zb = function(a)
 			{
 				if (a != r)
 				{
@@ -2867,12 +2667,12 @@
 					v(b)
 				}
 			};
-			f.nc = function(a)
+			f.Yb = function(a)
 			{
-				b.O(e, a)
+				b.I(e, a)
 			};
 			var u;
-			f.qc = function(D)
+			f.Vb = function(D)
 			{
 				if (!u)
 				{
@@ -2883,65 +2683,65 @@
 						n = c.ceil(s / i) - 1;
 					A = q + o * (!h ? n : i - 1);
 					z = p + r * (h ? n : i - 1);
-					b.l(e, A);
-					b.m(e, z);
+					b.k(e, A);
+					b.l(e, z);
 					for (var f = 0; f < s; f++)
 					{
-						var C = b.Je();
-						b.Kc(C, f + 1);
-						var k = b.Md(g, "numbertemplate", C, d);
-						b.C(k, "absolute");
+						var C = b.Bd();
+						b.Hc(C, f + 1);
+						var k = b.yd(g, "numbertemplate", C, d);
+						b.v(k, "absolute");
 						var v = f % (n + 1);
-						b.D(k, !h ? o * v : f % i * o);
-						b.E(k, h ? r * v : c.floor(f / (n + 1)) * r);
-						b.K(e, k);
+						b.B(k, !h ? o * v : f % i * o);
+						b.C(k, h ? r * v : c.floor(f / (n + 1)) * r);
+						b.E(e, k);
 						B[f] = k;
-						a.Yb & 1 && b.a(k, "click", b.G(j, t, f));
-						a.Yb & 2 && b.a(k, "mouseover", b.dc(b.G(j, t, f), k));
-						y[f] = b.bc(k)
+						a.Qb & 1 && b.a(k, "click", b.D(j, t, f));
+						a.Qb & 2 && b.a(k, "mouseover", b.Pb(b.D(j, t, f), k));
+						y[f] = b.Ob(k)
 					}
 					u = d
 				}
 			};
-			f.Cb = a = b.H(
+			f.Fb = a = b.bb(
 			{
-				id: 10,
-				ud: 10,
-				rd: 1,
-				Yb: 1
+				Bc: 10,
+				Ec: 10,
+				Fc: 1,
+				Qb: 1
 			}, C);
-			g = b.u(e, "prototype");
-			q = b.l(g);
-			p = b.m(g);
-			b.Fb(g, e);
-			m = a.vd || 1;
-			i = a.Tf || 1;
-			w = a.id;
-			x = a.ud;
-			h = a.rd - 1;
-			a.fc == k && b.A(e, "noscale", d);
-			a.ub && b.A(e, "autocenter", a.ub)
+			g = b.o(e, "prototype");
+			q = b.k(g);
+			p = b.l(g);
+			b.vb(g, e);
+			m = a.Gc || 1;
+			i = a.od || 1;
+			w = a.Bc;
+			x = a.Ec;
+			h = a.Fc - 1;
+			a.jc == k && b.n(e, "noscale", d);
+			a.rb && b.n(e, "autocenter", a.rb)
 		},
 		s = function(a, g, h)
 		{
 			var c = this;
 			n.call(c);
 			var r, q, e, f, i;
+			b.k(a);
 			b.l(a);
-			b.m(a);
 
 			function l(a)
 			{
-				c.k(o.pc, a, d)
+				c.f(o.Tb, a, d)
 			}
 
 			function p(c)
 			{
-				b.O(a, c || !h.lb && e == 0);
-				b.O(g, c || !h.lb && e >= q - h.ob);
+				b.I(a, c || !h.kb && e == 0);
+				b.I(g, c || !h.kb && e >= q - h.lb);
 				r = c
 			}
-			c.Rb = function(b, a, c)
+			c.Zb = function(b, a, c)
 			{
 				if (c) e = a;
 				else
@@ -2950,35 +2750,35 @@
 					p(r)
 				}
 			};
-			c.nc = p;
+			c.Yb = p;
 			var m;
-			c.qc = function(c)
+			c.Vb = function(c)
 			{
 				q = c;
 				e = 0;
 				if (!m)
 				{
-					b.a(a, "click", b.G(j, l, -i));
-					b.a(g, "click", b.G(j, l, i));
-					b.bc(a);
-					b.bc(g);
+					b.a(a, "click", b.D(j, l, -i));
+					b.a(g, "click", b.D(j, l, i));
+					b.Ob(a);
+					b.Ob(g);
 					m = d
 				}
 			};
-			c.Cb = f = b.H(
+			c.Fb = f = b.bb(
 			{
-				vd: 1
+				Gc: 1
 			}, h);
-			i = f.vd;
-			if (f.fc == k)
+			i = f.Gc;
+			if (f.jc == k)
 			{
-				b.A(a, "noscale", d);
-				b.A(g, "noscale", d)
+				b.n(a, "noscale", d);
+				b.n(g, "noscale", d)
 			}
-			if (f.ub)
+			if (f.rb)
 			{
-				b.A(a, "autocenter", f.ub);
-				b.A(g, "autocenter", f.ub)
+				b.n(a, "autocenter", f.rb);
+				b.n(g, "autocenter", f.rb)
 			}
 		};
 
@@ -2986,351 +2786,55 @@
 	{
 		var a = this;
 		m.call(a, 0, c);
-		a.ld = b.yc;
-		a.tc = 0;
-		a.wc = c
+		a.Pc = b.bd;
+		a.kd = 0;
+		a.fd = c
 	}
-	var t = function(n, g, l)
-	{
-		var a = this,
-			o, h = {},
-			i = g.ib,
-			c = new m(0, 0);
-		m.call(a, 0, 0);
-
-		function j(d, c)
-		{
-			var a = {};
-			b.c(d, function(d, f)
-			{
-				var e = h[f];
-				if (e)
-				{
-					if (b.Rf(d)) d = j(d, c || f == "e");
-					else if (c)
-						if (b.sc(d)) d = o[d];
-					a[e] = d
-				}
-			});
-			return a
-		}
-
-		function k(e, c)
-		{
-			var a = [],
-				d = b.xb(e);
-			b.c(d, function(d)
-			{
-				var h = b.j(d, "u") == "caption";
-				if (h)
-				{
-					var e = b.j(d, "t"),
-						g = i[b.Xb(e)] || i[e],
-						f = {
-							J: d,
-							ic: g
-						};
-					a.push(f)
-				}
-				if (c < 5) a = a.concat(k(d, c + 1))
-			});
-			return a
-		}
-
-		function r(e, f, a)
-		{
-			b.c(f, function(h)
-			{
-				var f = b.H(d,
-					{}, j(h)),
-					g = b.ed(f.S);
-				delete f.S;
-				if (f.g)
-				{
-					f.z = f.g;
-					g.z = g.g;
-					delete f.g
-				}
-				if (f.i)
-				{
-					f.s = f.i;
-					g.s = g.i;
-					delete f.i
-				}
-				var k = {
-						S: g,
-						P: a.qb,
-						Z: a.pb
-					},
-					i = new m(h.b, h.d, k, e, a, f);
-				c.wb(i);
-				a = b.ee(a, f)
-			});
-			return a
-		}
-
-		function q(a)
-		{
-			b.c(a, function(d)
-			{
-				var a = d.J,
-					f = b.l(a),
-					e = b.m(a),
-					c = {
-						g: b.D(a),
-						i: b.E(a),
-						z: 0,
-						s: 0,
-						sb: 1,
-						mb: b.q(a) || 0,
-						db: 0,
-						W: 0,
-						T: 0,
-						p: 1,
-						n: 1,
-						Y: 0,
-						eb: 0,
-						Q: 0,
-						Ob: 0,
-						Hb: 0,
-						qb: f,
-						pb: e,
-						f:
-						{
-							i: 0,
-							F: f,
-							B: e,
-							g: 0
-						}
-					};
-				c.Uc = c.g;
-				c.Vc = c.i;
-				r(a, d.ic, c)
-			})
-		}
-
-		function t(g, f, h)
-		{
-			var e = g.b - f;
-			if (e)
-			{
-				var b = new m(f, e);
-				b.wb(c, d);
-				b.Lb(h);
-				a.wb(b)
-			}
-			a.Kf(g.d);
-			return e
-		}
-
-		function s(f)
-		{
-			var d = c.Qb(),
-				e = 0;
-			b.c(f, function(c, f)
-			{
-				c = b.H(
-				{
-					d: l
-				}, c);
-				t(c, d, e);
-				d = c.b;
-				e += c.d;
-				if (!f || c.t == 2)
-				{
-					a.tc = d;
-					a.wc = d + c.d
-				}
-			})
-		}
-		a.ld = function()
-		{
-			a.v(-1, d)
-		};
-		o = [f.oe, f.pe, f.qe, f.re, f.se, f.te, f.ue, f.ve, f.we, f.xe, f.ye, f.ze, f.Tc, f.Ae, f.Be, f.Ce, f.De, f.Ee, f.Fe, f.Ge, f.He, f.Ie, f.qf, f.Ze, f.pf, f.sf, f.rf, f.tg, f.Wf, f.Xf, f.Yf, f.Zf, f.ag, f.bg, f.cg, f.dg, f.eg];
-		var u = {
-			i: "y",
-			g: "x",
-			B: "m",
-			F: "t",
-			db: "r",
-			W: "rX",
-			T: "rY",
-			p: "sX",
-			n: "sY",
-			Y: "tX",
-			eb: "tY",
-			Q: "tZ",
-			Ob: "kX",
-			Hb: "kY",
-			sb: "o",
-			S: "e",
-			mb: "i",
-			f: "c"
-		};
-		b.c(u, function(b, a)
-		{
-			h[b] = a
-		});
-		q(k(n, 1));
-		c.v(-1);
-		var p = g.Bg || [],
-			e = [].concat(p[b.Xb(b.j(n, "b"))] || []);
-		e.push(
-		{
-			b: c.Gb(),
-			d: e.length ? 0 : l
-		});
-		s(e);
-		a.v(-1)
-	};
 	jssor_1_slider_init = function()
 	{
-		var h = [
-				[
-				{
-					b: -1,
-					d: 1,
-					o: -1
-				},
-				{
-					b: 0,
-					d: 1e3,
-					o: 1
-				}],
-				[
-				{
-					b: 1900,
-					d: 2e3,
-					x: -379,
-					e:
-					{
-						x: 7
-					}
-				}],
-				[
-				{
-					b: 1900,
-					d: 2e3,
-					x: -379,
-					e:
-					{
-						x: 7
-					}
-				}],
-				[
-				{
-					b: -1,
-					d: 1,
-					o: -1,
-					r: 288,
-					sX: 9,
-					sY: 9
-				},
-				{
-					b: 1e3,
-					d: 900,
-					x: -1400,
-					y: -660,
-					o: 1,
-					r: -288,
-					sX: -9,
-					sY: -9,
-					e:
-					{
-						r: 6
-					}
-				},
-				{
-					b: 1900,
-					d: 1600,
-					x: -200,
-					o: -1,
-					e:
-					{
-						x: 16
-					}
-				}],
-				[
-				{
-					b: 0,
-					d: 1e3,
-					x: 852,
-					y: 238
-				},
-				{
-					b: 2e3,
-					d: 1e3,
-					x: 848,
-					y: 291
-				}],
-				[
-				{
-					b: 0,
-					d: 1e3,
-					x: -790,
-					y: 275
-				},
-				{
-					b: 2e3,
-					d: 1e3,
-					x: -763,
-					y: 286,
-					e:
-					{
-						x: 2,
-						y: 2
-					}
-				}]
-			],
-			j = {
+		var h = {
 				Ub: d,
-				Bb: 800,
-				Jc: f.Tc,
-				lg:
+				Db: 800,
+				Vc: f.Xd,
+				ge:
 				{
-					L: t,
-					ib: h
+					F: s
 				},
-				ig:
+				fe:
 				{
-					L: s
-				},
-				jg:
-				{
-					L: r
+					F: r
 				}
 			},
-			e = new i("jssor_1", j);
+			e = new i("jssor_1", h);
 
-		function k()
+		function j()
 		{
-			var d = b.Mf(e.J, "slides");
+			var d = b.Fd(e.S, "slides");
 			if (d)
 			{
 				var c = d[1];
 				if (c)
 				{
-					var a = b.u(c, "add");
+					var a = b.o(c, "add");
 					if (!a)
 					{
-						a = b.zb();
-						b.kb(a, "position:absolute;top:0px;right:0px;width:80px;height:20px;background-color:rgba(255,255,140,0.5);font-size:12px;line-height:20px;text-align:center;z-index:1000;");
-						b.Kc(a, "Jssor Slider");
-						b.K(c, a)
+						a = b.mb();
+						b.cb(a, "position:absolute;top:0px;right:0px;width:80px;height:20px;background-color:rgba(255,255,140,0.5);font-size:12px;line-height:20px;text-align:center;z-index:1000;");
+						b.Hc(a, "Jssor Slider");
+						b.E(c, a)
 					}
 				}
 			}
 		}
-		k();
+		j();
 
 		function a()
 		{
-			var b = e.J.parentNode.clientWidth;
+			var b = e.S.parentNode.clientWidth;
 			if (b)
 			{
 				b = c.min(b, 1920);
-				e.rg(b)
+				e.ae(b)
 			}
 			else g.setTimeout(a, 30)
 		}
