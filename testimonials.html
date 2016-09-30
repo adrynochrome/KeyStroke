@@ -41,17 +41,25 @@
 
 		<div id="stuff" class="stuff">
 			<div id="fts">Let us know what you think!</div>
-			<textarea name="feedback" class="feedback" cols="50" rows="10" required></textarea>
-			<br />
-			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Name" required/>
-			<br />
-			<input name="name" id="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Website" />
-			<br />
-			<div class="center">
-				<input name="do_it" type="submit" value="Submit" />
-			</div>
+			<form id="formHolder" action="testimonialsSubmit.php" method="post">
+				<input id="name" name="name" class="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Name" required/>
+				<br />
+				<textarea id="feedback" name="description" class="feedback" cols="50" rows="10" required></textarea>
+				<br />
+				<input id="link" name="link" class="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Website URL" />
+				<br />
+				<input id="siteName" name="siteName" class="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Website" />
+				<br />
+				<div class="center">
+					<div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div><br/>
+					<input type="button" value="Submit" onClick="giveTestimonial();" />
+				</div>
+				<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+			</form>
 			<!--charlie, when the user submits it should say "Thank you, your comment is awaiting approval" and then we get an e-mail, also include a captcha please! -->
 		</div>
+		
+		<div id="posted" class="posted"></div>
 
 
 	</div>
@@ -60,7 +68,7 @@
 	<script>
 		$( function() {
 			$("#stuff").hide();
-			loadMore(0,1,-1);
+			loadMore(0,2);
 		});
 		
 		function openTestimony()
@@ -72,17 +80,34 @@
 				});
 		}
 		
-		function loadMore(offset, length, max_key)
+		function giveTestimonial()
 		{
-			$.getJSON( "testimonialsLoadMore.php?offset=" + offset + "&length=" + length, function( data )
+			$.getJSON( "testimonialsSubmit.php?" + $( "#formHolder" ).serialize(), function( data )
+			{
+				$.each( data, function( key, val )
+				{
+					if(key === "success")
+					{
+						$("#posted").html(val);
+						$("#stuff").dialog("destroy");
+						$("#posted").dialog();
+					}
+				});
+			});
+		}
+		
+		function loadMore(offset, length, cur_key)
+		{
+			if( cur_key === undefined )
 			{
 				var cur_key = 0;
-				
+			}
+			
+			$.getJSON( "testimonialsLoadMore.php?offset=" + offset + "&length=" + length, function( data )
+			{	
 				$.each( data, function( key, val1 )
-				{
-					cur_key = key;
-					
-					if( max_key < cur_key )
+				{	
+					if( cur_key <= length )
 					{
 						if( (key % 2) === 0 )
 						{
@@ -104,12 +129,16 @@
 							if(key1 === "siteName")
 								$("#quote" + key).append(val + "</a></div>");
 						});
-						max_key = key;
+						
+						cur_key = key;
+					}
+					else
+					{
+						alert('No more testimonials to load.');
 					}
 				});
 				
-				console.log(max_key);
-				$("#more").attr("onClick", "loadMore(" + (key + 1) + ", " + (key + 2) + ", " + max_key + ");");
+				$("#more").attr("onClick", "loadMore(" + (parseInt(cur_key, 10) + 1) + ", " + (parseInt(cur_key, 10) + 3) + ", " + parseInt(cur_key, 10) + ");");
 			});
 		}
 	</script>
