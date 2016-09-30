@@ -59,7 +59,7 @@
 	left: 45%;
 }
 
-#overwhelmed {
+.overwhelmed {
 	border-radius: 50px 50px 50px 50px;
 	margin-top: 10px;
 	padding: 2px;
