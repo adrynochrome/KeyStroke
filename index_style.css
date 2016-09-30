@@ -5,7 +5,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-p{
+p {
 	text-indent: 20px;
 }
 
@@ -75,6 +75,7 @@ li {
 
 #col2 {
 	/*width of img is wider than div*/
+	
 	left: calc(100% / 3);
 	margin-right: 3px;
 	margin-left: 3px;
@@ -88,13 +89,14 @@ li {
 }
 
 #col3 {
-	position:absolute;
+	position: absolute;
 	left: calc(100% - 33.1%);
 	border-radius: 30px 5px 30px 5px;
 }
 
 #col3 img {
 	/*not sure why the width is messed up now*/
+	
 	width: calc(100% - 6px);
 	height: 100%;
 	border-radius: 30px 5px 30px 5px;
@@ -112,6 +114,7 @@ li {
 
 #overlay2 {
 	/*added margin to center column*/
+	
 	position: absolute;
 	top: 100%;
 	width: calc(100% - 6px);
@@ -120,7 +123,6 @@ li {
 	opacity: 0;
 	border-radius: 5px 30px 5px 30px;
 	margin-right: 3px;
-
 }
 
 #overlay3 {
@@ -138,55 +140,52 @@ li {
 	text-align: center;
 }
 
+#slider_holder {
+	width: calc(100% - 20px);
+	margin: 5px;
+}
+
 @media only screen and (max-width: 500px) {
-\
-	#content {
+	\ #content {
 		height: 100%;
 		width: 100%;
 		padding: 1px;
 		min-height: 400px;
-}
-
+	}
 	#img-row {
 		width: 100%;
 		height: calc(100% / 3);
 		position: relative;
-}
-
+	}
 	.pix {
 		width: 100%;
 		height: calc(100% / 3);
 		position: absolute;
 		overflow: hidden;
-}
+	}
 	#col1 img {
 		width: calc(100% - 4px);
 		height: 100%;
 		border-radius: 5px 30px 5px 30px;
-}
-
+	}
 	#col2 {
 		margin-right: 3px;
 		margin-left: 3px;
 		border-radius: 30px 30px 30px 30px;
-}
-
+	}
 	#col2 img {
 		width: calc(100% - 4px);
 		height: 100%;
 		border-radius: 30px 30px 30px 30px;
-}
-
+	}
 	#col3 {
 		border-radius: 30px 5px 30px 5px;
-}
-
+	}
 	#col3 img {
 		width: calc(100% - 4px);
 		height: 100%;
 		border-radius: 30px 5px 30px 5px;
-}
-
+	}
 	#overlay1 {
 		position: absolute;
 		top: 100%;
@@ -195,8 +194,7 @@ li {
 		background-color: white;
 		opacity: 0;
 		border-radius: 5px 30px 5px 30px;
-}
-
+	}
 	#overlay2 {
 		position: absolute;
 		top: 100%;
@@ -206,9 +204,7 @@ li {
 		opacity: 0;
 		border-radius: 5px 30px 5px 30px;
 		margin-right: 3px;
-
-}
-
+	}
 	#overlay3 {
 		position: absolute;
 		top: 100%;
@@ -217,4 +213,5 @@ li {
 		background-color: white;
 		opacity: 0;
 		border-radius: 30px 5px 30px 5px;
+	}
 }
