@@ -1,5 +1,33 @@
 <?php
 /******************************************************************************
+ * Validate the captcha
+/******************************************************************************/
+	require_once "recaptchalib.php";
+
+	// your secret key
+	$secret = "6LcePAATAAAAABjXaTsy7gwcbnbaF5XgJKwjSNwT";
+	 
+	// empty response
+	$response = null;
+	 
+	// check secret key
+	$reCaptcha = new ReCaptcha($secret);
+	
+	// if submitted check response
+	if ($_POST["g-recaptcha-response"]) {
+		$response = $reCaptcha->verifyResponse(
+		    $_SERVER["REMOTE_ADDR"],
+		    $_POST["g-recaptcha-response"]
+		);
+	}
+	
+	if ($response == null && !$response->success)
+	{
+		echo '{ "fail": "<h1> Captcha failed, please try again.</h1>" }';
+		exit();
+	}
+
+/******************************************************************************
  * Create the testimony json file
 /******************************************************************************/
 	$file_name = 'temp/' . date('Y') . '-' . date('m') . '-' . date('d') . '-' . date('H') . '-' . date('i') . '.json';

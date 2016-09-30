@@ -51,8 +51,10 @@
 				<input id="siteName" name="siteName" class="overwhelmed" type="text" size="30" maxlength="50" placeholder= "Your Website" />
 				<br />
 				<div class="center">
+					<div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div><br/>
 					<input type="button" value="Submit" onClick="giveTestimonial();" />
 				</div>
+				<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 			</form>
 			<!--charlie, when the user submits it should say "Thank you, your comment is awaiting approval" and then we get an e-mail, also include a captcha please! -->
 		</div>
@@ -86,7 +88,7 @@
 				{
 					if(key === "success")
 					{
-						$("#posted").append(val);
+						$("#posted").html(val);
 						$("#stuff").dialog("destroy");
 						$("#posted").dialog();
 					}
