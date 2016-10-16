@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Free Web Design Quote - Keystroke Collab</title>
+    <meta name = "description" content="Free Web Design quotes- no money down until we start coding! Entrepeneurs working for entrepeneurs. Websites that accept Bitcoin." />
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="jquery-ui.js"></script>
+   <!--index_style is not included because it messes up the calendar CSS -->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="contact.css" rel="stylesheet" type="text/css" />
+	<link href="jquery-ui.css" rel="stylesheet" type="text/css" />
+	
+    <script>
+				
+		$( window ).resize(function()
+		{
+			banner_height = $("#banner").outerHeight(true);
+			navbar_height = $("#navbar").outerHeight(true);
+			construction_height = $("#construction").outerHeight(true);
+			
+			header = banner_height + navbar_height + construction_height + 20;
+			
+			$("#content-wrapper").css('top', header);
+			
+			console.log(header);
+		});
+		
+		$(document).ready(function()
+		{
+			banner_height = $("#banner").outerHeight(true);
+			navbar_height = $("#navbar").outerHeight(true);
+			
+			header = banner_height + navbar_height + 20;
+			
+			$("#content-wrapper").css('top', header);
+			
+			console.log(header);
+		});
+	</script>
+</head>
+
+<body>
+
+	<?php include_once("analyticstracking.php") ?>
+   <div id="banner"><!--size of banner has been changed outside of DW as well as in the HTML as of 10.16.16it's probably not working because of Charlie's jquery -->
+		<a href="web-design-hosting-IT-Richmond-VA.html"><img src="imgs/banner.gif" width= "615" height="115" alt="affordable responsive web design hosting and SEO"/></a>
+	</div>
+    
+    
+	<div id="navbar" class= "purple">
+		<ul>
+			<li><a href="web-design-hosting-IT-Richmond-VA.html">Home</a> |</li>
+			<li> <a href="team.html">The Team</a> |</li>
+            <li> <a href="responsive-web-design-templates.html">Templates</a> |</li>
+			<li><a href="free-web-design-quote.html"> Contact Us</a> |</li>
+			<li><a href="highest-ranked-website.html"> Testimonials</a> |</li>
+			<li><a href="sites-that-accept-btc.html">Payments</a></li>
+            <li>
+            <a href="https://www.facebook.com/keystrokecollab" target="_blank"><img src="imgs/fb.png" width="37" height="37" alt="keystroke collab" /></a>
+            </li>
+		</ul>
+</div>
+    <div id="content-wrapper">
+	<div id="content"><div class="purple">
+		<p> We offer free quotes and we accept a non-refundable 50% down payment based off of the initial quote. The remaining amount will not be collected until the site is complete and you are satisfied. For our clients paying entirely in BTC or cash, we offer a 10% discount. If you are a<a href="http://liberaterva.com" target="_new"> Liberate RVA</a> member, you can receive an additional 10% off.</p></div>
+        
+		<p> Please fill out the following form to receieve a free quote and we will get back to you as soon as possible. Thank you.</p>
+		<br />
+		<br />
+		<form action="submit.php" method="post" enctype="multipart/form-data" target="_self" id="contact-form">
+			<p>Email address</p>
+			<input name="email" id="email" type="text" /><br />
+			<p>Your name</p>
+			<input name="name" id="name" type="text" /><br />
+			<p>Your phone</p>
+			<input name="phone" id="phone" type="text" /><br />
+			<p>Website name/URL</p>
+            <input name="domain" id="domain" type="text" /><br /
+            <br />
+            
+          <div id = "nuts">
+			What kind of website are you interested in?<br />
+			<input name="type" id="radio1" type="radio" value="WordPress" />Wordpress<br />
+			<input name="type" id="radio2" type="radio" value="FromScratch" />From Scratch<br />
+			<input name="type" id="radio3" type="radio" value="Not Sure" />Not Sure<br />
+			<input name="type" id="radio4" type="radio" value="Other" />Other
+			<input name="other" id="other" type="text" /><br />
+			<br />
+            <input name="SEO" type="checkbox" value="Yes" />Include SEO<br>
+            <input name="mobile" type="checkbox" value="Yes" />Include separate mobile site<br>
+            <input name="hosting" type="checkbox" value="Yes" />Include hosting<br>
+            <br>
+        </div>
+            
+			<p class="left">Please tell us a little bit about what you have in mind for your site,<strong> we cannot give an accurate estimate without knowing how many pages it will be.</strong> Let us know if this is a revamp or if there is a site that you would like it modeled after.</p>
+			<textarea name="description" required cols="40" rows="5" class="text"></textarea><br />
+            
+	    <p>If you have any visual representations or mock ups,<br /> feel free to upload them here:</p>
+            
+            <div id = "uploads">
+			<input name="image1" type="file" accept="image/*" size="10mb" class="upload" /><br />
+			<input name="image2" type="file" accept="image/*" size="10mb" class="upload" /><br />
+            </div><!--enduploads div---->
+            <br />
+            
+			<p>When would you like to launch the site?</p>
+			<input name="date" type="text" id="datepicker" /><br/>
+			<div class="g-recaptcha" data-sitekey="6LfRKwgUAAAAAMOuDbsb_HRRsZBqZozwiQNUM5xo"></div><br/>
+			<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+			<input type="button" value="Submit" class="button" onClick="processForm()" />
+		</form>
+	</div><!--end content div -->
+    </div>
+	
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+		
+		function processForm() {
+			var cleared = true;
+			
+			if($("#email").val() === '')
+			{
+				cleared = false;
+				alert("Missing email address");
+			}
+			
+			if($("#name").val() === '')
+			{
+				cleared = false;
+				alert("Missing name");
+			}
+			
+			if($("#phone").val() === '')
+			{
+				cleared = false;
+				alert("Missing phone number");
+			}
+			
+			if($("#domain").val() === '')
+			{
+				cleared = false;
+				alert("Missing website name");
+			}
+			
+			if(!$("#radio1").prop('checked') && !$("#radio2").prop('checked') && !$("#radio3").prop('checked') && !$("#radio4").prop('checked'))
+			{
+				cleared = false;
+				console.log($("#radio1").prop('checked'));
+				alert("Missing type of site");
+			}
+			
+			if($("#radio4").prop('checked'))
+			{
+				if($("#other").val() === '')
+				{
+					cleared = false;
+					alert("Missing type of site description");
+				}
+			}
+			
+			if($("#description").val() === '')
+			{
+				cleared = false;
+				alert("Missing website description");
+			}
+			
+			if($("#datepicker").val() === '')
+			{
+				cleared = false;
+				alert("Missing launch date");
+			}
+			
+			$("#contact-form").submit();
+		}
+	</script>
+
+</body>
+
+</html>
